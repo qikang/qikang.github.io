@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Linux系统文件描述符 | Test Code</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Linux系统文件描述符0、1、2 是系统保留的三个文件描述符，分别对应标准输入、标准输出、标准错误  0 -&gt; stdin 1 -&gt; stdout 2 -&gt; stderr   系统中有12个文件描述符，0、1、2是系统保留的。我们可以任意使用文件描述符3到9。 输出重定向        Command &gt; filename 把标准输出重定向到一个新文件中   Comman">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux系统文件描述符">
+<meta property="og:url" content="http://qikang.github.io/2020/04/03/linux-system-file-descriptor/index.html">
+<meta property="og:site_name" content="Test Code">
+<meta property="og:description" content="Linux系统文件描述符0、1、2 是系统保留的三个文件描述符，分别对应标准输入、标准输出、标准错误  0 -&gt; stdin 1 -&gt; stdout 2 -&gt; stderr   系统中有12个文件描述符，0、1、2是系统保留的。我们可以任意使用文件描述符3到9。 输出重定向        Command &gt; filename 把标准输出重定向到一个新文件中   Comman">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-04-03T14:38:54.000Z">
+<meta property="article:modified_time" content="2020-04-03T15:10:21.911Z">
+<meta property="article:author" content="qikang">
+<meta property="article:tag" content="linux">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Test Code" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Test Code</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">成功没有捷径</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://qikang.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-linux-system-file-descriptor" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/04/03/linux-system-file-descriptor/" class="article-date">
+  <time datetime="2020-04-03T14:38:54.000Z" itemprop="datePublished">2020-04-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Linux系统文件描述符
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="Linux系统文件描述符"><a href="#Linux系统文件描述符" class="headerlink" title="Linux系统文件描述符"></a>Linux系统文件描述符</h5><p>0、1、2 是系统保留的三个文件描述符，分别对应标准输入、标准输出、标准错误</p>
+<ul>
+<li>0 -&gt; stdin</li>
+<li>1 -&gt; stdout</li>
+<li>2 -&gt; stderr</li>
+</ul>
+<hr>
+<h5 id="系统中有12个文件描述符，0、1、2是系统保留的。我们可以任意使用文件描述符3到9。"><a href="#系统中有12个文件描述符，0、1、2是系统保留的。我们可以任意使用文件描述符3到9。" class="headerlink" title="系统中有12个文件描述符，0、1、2是系统保留的。我们可以任意使用文件描述符3到9。"></a>系统中有12个文件描述符，0、1、2是系统保留的。我们可以任意使用文件描述符3到9。</h5><hr>
+<h6 id="输出重定向"><a href="#输出重定向" class="headerlink" title="输出重定向"></a>输出重定向</h6><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Command &gt; filename</td>
+<td>把标准输出重定向到一个新文件中</td>
+</tr>
+<tr>
+<td>Command &gt;&gt; filename</td>
+<td>把标准输出重定向到一个文件中（追加）</td>
+</tr>
+<tr>
+<td>Command &gt; filename</td>
+<td>把标准输出重定向到一个文件中</td>
+</tr>
+<tr>
+<td>Command &gt; filename 2&gt;&amp;1</td>
+<td>把标准输出和错误一起重定向到一个文件中</td>
+</tr>
+<tr>
+<td>Command 2 &gt; filename</td>
+<td>把标准错误重定向到一个文件中</td>
+</tr>
+<tr>
+<td>Command 2 &gt;&gt; filename</td>
+<td>把标准输出重定向到一个文件中（追加）</td>
+</tr>
+<tr>
+<td>Command &gt;&gt; filename 2&gt;&amp;1</td>
+<td>把标准输出和错误一起重定向到一个文件（追加）</td>
+</tr>
+</tbody></table>
+<h6 id="输入重定向"><a href="#输入重定向" class="headerlink" title="输入重定向"></a>输入重定向</h6><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Command &lt; filename &gt; filename2</td>
+<td>Command命令以filename文件作为标准输入，以filename2文件作为标准输出</td>
+</tr>
+<tr>
+<td>Command &lt; filename</td>
+<td>Command命令以filename文件作为标准输入</td>
+</tr>
+<tr>
+<td>Command &lt;&lt; delimiter</td>
+<td>从标准输入中读入，知道遇到delimiter分界符</td>
+</tr>
+</tbody></table>
+<h6 id="绑定重定向"><a href="#绑定重定向" class="headerlink" title="绑定重定向"></a>绑定重定向</h6><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Command &gt;&amp;m</td>
+<td>把标准输出重定向到文件描述符m中</td>
+</tr>
+<tr>
+<td>Command &lt; &amp;</td>
+<td>-关闭标准输入</td>
+</tr>
+<tr>
+<td>Command 0&gt;&amp;</td>
+<td>-同上</td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://qikang.github.io/2020/04/03/linux-system-file-descriptor/" data-id="ck8kbrhd70007v5n887gd4x1c" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/04/03/linux-sed/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          linux sed
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/04/03/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/test/" rel="tag">test</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/test/" style="font-size: 10px;">test</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">四月 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/04/03/linux-sed/">linux sed</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/03/linux-system-file-descriptor/">Linux系统文件描述符</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/03/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 qikang<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
