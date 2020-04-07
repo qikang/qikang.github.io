@@ -65,6 +65,104 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-paramiko-invoke-shell-run-remote-cmd" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/posts/94fc0ef6/" class="article-date">
+  <time datetime="2020-04-07T13:35:44.000Z" itemprop="datePublished">2020-04-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/posts/94fc0ef6/">paramiko-invoke_shell-run-remote-cmd</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>参考网址：</strong> <a href="http://docs.paramiko.org/en/stable/api/channel.html" target="_blank" rel="noopener">http://docs.paramiko.org/en/stable/api/channel.html</a></p>
+<ul>
+<li>需求：<ul>
+<li>使用普通用户登录到远程服务器</li>
+<li>sudo到root用户，并执行指定命令</li>
+<li>获取命令的执行结果</li>
+</ul>
+</li>
+</ul>
+<pre><code>
+#!/usr/bin/env python3
+import paramiko,time
+
+command = 'ls -al /tmp/ \n'
+buff_size = 1024
+wait_time = 1
+
+def ssh_for_root_cmd_recv(channel,cmd):
+    buff = bytes()
+    channel.send(cmd)
+    time.sleep(wait_time)
+
+    while channel.recv_ready():
+        resp = channel.recv(buff_size)
+        buff += resp
+
+    buff_list = (buff.decode('utf-8')).split('\n')
+
+    return (buff_list[1:-1])
+
+
+def ssh_for_root_cmd_run():
+    ssh = paramiko.SSHClient()
+    ssh.load_system_host_keys()
+    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+    ssh.connect('localhost', port=22, username='user1', key_filename='/home/user1/.ssh/test.pem', timeout=3,)
+    chan = ssh.invoke_shell()
+
+    # 过滤登录时的信息。
+    time.sleep(wait_time)
+    while chan.recv_ready():
+        chan.recv(buff_size)
+        # print((chan.recv(buff_size)).decode('utf-8'))
+
+    # 切换到root用户
+    ssh_for_root_cmd_recv(chan,'sudo su - \n')
+
+    # 运行需要执行的root命令。
+    cmd_resoult = ssh_for_root_cmd_recv(chan,command)
+
+    chan.close()
+    ssh.close()
+
+    return (cmd_resoult)
+
+if __name__ == '__main__':
+    for resoult_line in ssh_for_root_cmd_run():
+        print (resoult_line)
+
+</code></pre>
+
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://qikang.github.io/posts/94fc0ef6/" data-id="ck8pyh1rb0006tzn88y4ob7mf" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-install-k8s-for-kubeadmin" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/posts/c27ca6ea/" class="article-date">
@@ -220,7 +318,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://qikang.github.io/posts/c27ca6ea/" data-id="ck8n1jiud00028vn8d5r8hfof" class="article-share-link">Share</a>
+      <a data-url="http://qikang.github.io/posts/c27ca6ea/" data-id="ck8pyh1r90005tzn8cgza6ozk" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Kubernetes/" rel="tag">Kubernetes</a></li></ul>
@@ -267,7 +365,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://qikang.github.io/posts/7eee9ede/" data-id="ck8n1jiug00048vn8df3wggxo" class="article-share-link">Share</a>
+      <a data-url="http://qikang.github.io/posts/7eee9ede/" data-id="ck8pyh1qz0000tzn86ljyf5by" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sed/" rel="tag">sed</a></li></ul>
@@ -393,7 +491,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://qikang.github.io/posts/49e9da92/" data-id="ck8n1jiui00068vn8c1480q7g" class="article-share-link">Share</a>
+      <a data-url="http://qikang.github.io/posts/49e9da92/" data-id="ck8pyh1rc0007tzn87qk7euql" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/file-descriptor/" rel="tag">file-descriptor</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/" rel="tag">shell</a></li></ul>
@@ -440,7 +538,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://qikang.github.io/posts/4a17b156/" data-id="ck8n1jiu800008vn82koh9sdh" class="article-share-link">Share</a>
+      <a data-url="http://qikang.github.io/posts/4a17b156/" data-id="ck8pyh1r50002tzn8gayrdrlm" class="article-share-link">Share</a>
       
       
     </footer>
@@ -500,6 +598,10 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/posts/94fc0ef6/">paramiko-invoke_shell-run-remote-cmd</a>
+          </li>
         
           <li>
             <a href="/posts/c27ca6ea/">Kubernetes - install(kubeadm)</a>
