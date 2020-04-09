@@ -65,6 +65,103 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-container-docker-run" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/posts/96f04b47/" class="article-date">
+  <time datetime="2020-04-09T14:16:55.000Z" itemprop="datePublished">2020-04-09</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/container/">container</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/posts/96f04b47/">Docker run 常用选项</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>官方文档：</strong> <a href="https://docs.docker.com/engine/reference/commandline/run/" target="_blank" rel="noopener">https://docs.docker.com/engine/reference/commandline/run/</a><br><strong>docker 论坛文档：</strong> <a href="http://dockone.io/article/152" target="_blank" rel="noopener">http://dockone.io/article/152</a></p>
+<h4 id="这里只是列举常用的，不做详细介绍。"><a href="#这里只是列举常用的，不做详细介绍。" class="headerlink" title="这里只是列举常用的，不做详细介绍。"></a>这里只是列举常用的，不做详细介绍。</h4><h5 id="启动一个容器："><a href="#启动一个容器：" class="headerlink" title="启动一个容器："></a><strong>启动一个容器：</strong></h5><p>$ docker run \<br>-d \<br>–name leslie \<br>-h leslie \<br>-p 9002:80 \<br>-v /var/www/html/leslie/:/var/www/html/ \<br>–add-host ‘chopedb test.abc.com’:172.17.0.1 \<br>nginx:latest</p>
+<h5 id="进入容器内："><a href="#进入容器内：" class="headerlink" title="进入容器内："></a><strong>进入容器内：</strong></h5><ul>
+<li><p>运行一个临时容器，然后运行 /bin/bash<br>$ docker run -it –rm redis /bin/bash</p>
+</li>
+<li><p>在一个已经存在的容器上运行/bin/bash<br>$ docker exec -it leslie /bin/bash</p>
+</li>
+</ul>
+<h5 id="常用选项"><a href="#常用选项" class="headerlink" title="常用选项"></a><strong>常用选项</strong></h5><ol>
+<li><p><strong>绑定容器的端口到宿主机</strong></p>
+<ul>
+<li>-P（大写），把Dockerfile中EXPOSE设置的暴露端口都映射到宿主机。</li>
+</ul>
+<p> -P 8080:80，宿主机8080和容器80映射</p>
+</li>
+<li><p><strong>设置容器的主机名</strong></p>
+<ul>
+<li>–hostname 或 -h 设置容器的主机名</li>
+</ul>
+</li>
+<li><p><strong>设置运行的容器名字</strong></p>
+<ul>
+<li>–name leslie</li>
+</ul>
+</li>
+<li><p><strong>获取一个终端tty</strong></p>
+<ul>
+<li>-t tty</li>
+</ul>
+</li>
+<li><p><strong>Keep STDIN open even if not attached</strong></p>
+<ul>
+<li>-i Keep STDIN open even if not attached</li>
+</ul>
+</li>
+<li><p><strong>在后台运行容器</strong></p>
+<ul>
+<li>-d Run container in background and print container ID</li>
+</ul>
+</li>
+<li><p><strong>退出时删除容器</strong></p>
+<ul>
+<li>–rm 在退出时删除容器，不能与-d同时使用。</li>
+</ul>
+</li>
+<li><p><strong>修改容器内/etc/hosts</strong></p>
+<ul>
+<li>–add-host chopedb:172.17.0.1</li>
+<li>–add-host ‘api.leslie.chope.net.cn api.leslie.chope.cc’:127.0.0.1</li>
+</ul>
+</li>
+<li><p><strong>设置环境变量</strong></p>
+<ul>
+<li>$ docker run –env VAR1=value1 –env VAR2=value2 ubuntu env | grep VAR<br>$ VAR1=value1<br>$ VAR2=value2</li>
+</ul>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://qikang.github.io/posts/96f04b47/" data-id="ck8sulk2q00036mn8hjf2a7e0" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-container-docker-Dockerfile" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/posts/91077317/" class="article-date">
@@ -83,7 +180,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/posts/91077317/">container-docker-Dockerfile</a>
+      <a class="article-title" href="/posts/91077317/">Dockerfile 介绍</a>
     </h1>
   
 
@@ -159,7 +256,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://qikang.github.io/posts/91077317/" data-id="ck8ssp5x60000vcn8b05x9ghg" class="article-share-link">Share</a>
+      <a data-url="http://qikang.github.io/posts/91077317/" data-id="ck8sulk2n00016mn824kv0b5u" class="article-share-link">Share</a>
       
       
     </footer>
@@ -261,7 +358,7 @@ if __name__ == '__main__':
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://qikang.github.io/posts/94fc0ef6/" data-id="ck8ssp5xw0008vcn82ugqgsrj" class="article-share-link">Share</a>
+      <a data-url="http://qikang.github.io/posts/94fc0ef6/" data-id="ck8sulk2u00086mn81rst111h" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
@@ -428,7 +525,7 @@ if __name__ == '__main__':
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://qikang.github.io/posts/c27ca6ea/" data-id="ck8ssp5xn0002vcn86w9a228z" class="article-share-link">Share</a>
+      <a data-url="http://qikang.github.io/posts/c27ca6ea/" data-id="ck8sulk2v00096mn8egs4glsi" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Kubernetes/" rel="tag">Kubernetes</a></li></ul>
@@ -475,7 +572,7 @@ if __name__ == '__main__':
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://qikang.github.io/posts/7eee9ede/" data-id="ck8ssp5xt0006vcn81f5wh5t8" class="article-share-link">Share</a>
+      <a data-url="http://qikang.github.io/posts/7eee9ede/" data-id="ck8sulk2r00046mn8duze5hyv" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sed/" rel="tag">sed</a></li></ul>
@@ -601,7 +698,7 @@ if __name__ == '__main__':
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://qikang.github.io/posts/49e9da92/" data-id="ck8ssp5xv0007vcn8bnly2qxu" class="article-share-link">Share</a>
+      <a data-url="http://qikang.github.io/posts/49e9da92/" data-id="ck8sulk2s00056mn85vjkc956" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/file-descriptor/" rel="tag">file-descriptor</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/" rel="tag">shell</a></li></ul>
@@ -648,7 +745,7 @@ if __name__ == '__main__':
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://qikang.github.io/posts/4a17b156/" data-id="ck8ssp5xp0003vcn85unw5133" class="article-share-link">Share</a>
+      <a data-url="http://qikang.github.io/posts/4a17b156/" data-id="ck8sulk2j00006mn8edkn6nw9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -710,7 +807,11 @@ if __name__ == '__main__':
       <ul>
         
           <li>
-            <a href="/posts/91077317/">container-docker-Dockerfile</a>
+            <a href="/posts/96f04b47/">Docker run 常用选项</a>
+          </li>
+        
+          <li>
+            <a href="/posts/91077317/">Dockerfile 介绍</a>
           </li>
         
           <li>
@@ -723,10 +824,6 @@ if __name__ == '__main__':
         
           <li>
             <a href="/posts/7eee9ede/">linux sed</a>
-          </li>
-        
-          <li>
-            <a href="/posts/49e9da92/">Linux系统文件描述符</a>
           </li>
         
       </ul>

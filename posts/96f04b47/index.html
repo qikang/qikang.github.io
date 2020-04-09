@@ -5,19 +5,19 @@
   
 
   
-  <title>paramiko-invoke_shell-run-remote-cmd | Test Code</title>
+  <title>Docker run 常用选项 | Test Code</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="参考网址： http:&#x2F;&#x2F;docs.paramiko.org&#x2F;en&#x2F;stable&#x2F;api&#x2F;channel.html  需求： 使用普通用户登录到远程服务器 sudo到root用户，并执行指定命令 获取命令的执行结果     #!&#x2F;usr&#x2F;bin&#x2F;env python3 import paramiko,time  command &#x3D; &#39;ls -al &#x2F;tmp&#x2F; \n&#39; buff_size &#x3D; 102">
+  <meta name="description" content="官方文档： https:&#x2F;&#x2F;docs.docker.com&#x2F;engine&#x2F;reference&#x2F;commandline&#x2F;run&#x2F;docker 论坛文档： http:&#x2F;&#x2F;dockone.io&#x2F;article&#x2F;152 这里只是列举常用的，不做详细介绍。启动一个容器：$ docker run \-d \–name leslie \-h leslie \-p 9002:80 \-v &#x2F;var&#x2F;www&#x2F;htm">
 <meta property="og:type" content="article">
-<meta property="og:title" content="paramiko-invoke_shell-run-remote-cmd">
-<meta property="og:url" content="http://qikang.github.io/posts/94fc0ef6/index.html">
+<meta property="og:title" content="Docker run 常用选项">
+<meta property="og:url" content="http://qikang.github.io/posts/96f04b47/index.html">
 <meta property="og:site_name" content="Test Code">
-<meta property="og:description" content="参考网址： http:&#x2F;&#x2F;docs.paramiko.org&#x2F;en&#x2F;stable&#x2F;api&#x2F;channel.html  需求： 使用普通用户登录到远程服务器 sudo到root用户，并执行指定命令 获取命令的执行结果     #!&#x2F;usr&#x2F;bin&#x2F;env python3 import paramiko,time  command &#x3D; &#39;ls -al &#x2F;tmp&#x2F; \n&#39; buff_size &#x3D; 102">
+<meta property="og:description" content="官方文档： https:&#x2F;&#x2F;docs.docker.com&#x2F;engine&#x2F;reference&#x2F;commandline&#x2F;run&#x2F;docker 论坛文档： http:&#x2F;&#x2F;dockone.io&#x2F;article&#x2F;152 这里只是列举常用的，不做详细介绍。启动一个容器：$ docker run \-d \–name leslie \-h leslie \-p 9002:80 \-v &#x2F;var&#x2F;www&#x2F;htm">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-04-07T13:35:44.000Z">
-<meta property="article:modified_time" content="2020-04-07T13:51:17.674Z">
+<meta property="article:published_time" content="2020-04-09T14:16:55.000Z">
+<meta property="article:modified_time" content="2020-04-09T14:18:55.490Z">
 <meta property="article:author" content="qikang">
-<meta property="article:tag" content="python">
+<meta property="article:tag" content="DevOps devops linux python docker container k8s kubernetes jenkins gitlab">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Test Code" type="application/atom+xml">
@@ -67,14 +67,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-paramiko-invoke-shell-run-remote-cmd" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-container-docker-run" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/posts/94fc0ef6/" class="article-date">
-  <time datetime="2020-04-07T13:35:44.000Z" itemprop="datePublished">2020-04-07</time>
+    <a href="/posts/96f04b47/" class="article-date">
+  <time datetime="2020-04-09T14:16:55.000Z" itemprop="datePublished">2020-04-09</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/python/">python</a>
+    <a class="article-category-link" href="/categories/container/">container</a>
   </div>
 
   </div>
@@ -85,7 +85,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      paramiko-invoke_shell-run-remote-cmd
+      Docker run 常用选项
     </h1>
   
 
@@ -93,96 +93,80 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>参考网址：</strong> <a href="http://docs.paramiko.org/en/stable/api/channel.html" target="_blank" rel="noopener">http://docs.paramiko.org/en/stable/api/channel.html</a></p>
-<ul>
-<li>需求：<ul>
-<li>使用普通用户登录到远程服务器</li>
-<li>sudo到root用户，并执行指定命令</li>
-<li>获取命令的执行结果</li>
-</ul>
+        <p><strong>官方文档：</strong> <a href="https://docs.docker.com/engine/reference/commandline/run/" target="_blank" rel="noopener">https://docs.docker.com/engine/reference/commandline/run/</a><br><strong>docker 论坛文档：</strong> <a href="http://dockone.io/article/152" target="_blank" rel="noopener">http://dockone.io/article/152</a></p>
+<h4 id="这里只是列举常用的，不做详细介绍。"><a href="#这里只是列举常用的，不做详细介绍。" class="headerlink" title="这里只是列举常用的，不做详细介绍。"></a>这里只是列举常用的，不做详细介绍。</h4><h5 id="启动一个容器："><a href="#启动一个容器：" class="headerlink" title="启动一个容器："></a><strong>启动一个容器：</strong></h5><p>$ docker run \<br>-d \<br>–name leslie \<br>-h leslie \<br>-p 9002:80 \<br>-v /var/www/html/leslie/:/var/www/html/ \<br>–add-host ‘chopedb test.abc.com’:172.17.0.1 \<br>nginx:latest</p>
+<h5 id="进入容器内："><a href="#进入容器内：" class="headerlink" title="进入容器内："></a><strong>进入容器内：</strong></h5><ul>
+<li><p>运行一个临时容器，然后运行 /bin/bash<br>$ docker run -it –rm redis /bin/bash</p>
+</li>
+<li><p>在一个已经存在的容器上运行/bin/bash<br>$ docker exec -it leslie /bin/bash</p>
 </li>
 </ul>
-<pre><code>
-#!/usr/bin/env python3
-import paramiko,time
-
-command = 'ls -al /tmp/ \n'
-buff_size = 1024
-wait_time = 1
-
-def ssh_for_root_cmd_recv(channel,cmd):
-    buff = bytes()
-    channel.send(cmd)
-    time.sleep(wait_time)
-
-    while channel.recv_ready():
-        resp = channel.recv(buff_size)
-        buff += resp
-
-    buff_list = (buff.decode('utf-8')).split('\n')
-
-    return (buff_list[1:-1])
-
-
-def ssh_for_root_cmd_run():
-    ssh = paramiko.SSHClient()
-    ssh.load_system_host_keys()
-    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    ssh.connect('localhost', port=22, username='user1', key_filename='/home/user1/.ssh/test.pem', timeout=3,)
-    chan = ssh.invoke_shell()
-
-    # 过滤登录时的信息。
-    time.sleep(wait_time)
-    while chan.recv_ready():
-        chan.recv(buff_size)
-        # print((chan.recv(buff_size)).decode('utf-8'))
-
-    # 切换到root用户
-    ssh_for_root_cmd_recv(chan,'sudo su - \n')
-
-    # 运行需要执行的root命令。
-    cmd_resoult = ssh_for_root_cmd_recv(chan,command)
-
-    chan.close()
-    ssh.close()
-
-    return (cmd_resoult)
-
-if __name__ == '__main__':
-    for resoult_line in ssh_for_root_cmd_run():
-        print (resoult_line)
-
-</code></pre>
-
-
+<h5 id="常用选项"><a href="#常用选项" class="headerlink" title="常用选项"></a><strong>常用选项</strong></h5><ol>
+<li><p><strong>绑定容器的端口到宿主机</strong></p>
+<ul>
+<li>-P（大写），把Dockerfile中EXPOSE设置的暴露端口都映射到宿主机。</li>
+</ul>
+<p> -P 8080:80，宿主机8080和容器80映射</p>
+</li>
+<li><p><strong>设置容器的主机名</strong></p>
+<ul>
+<li>–hostname 或 -h 设置容器的主机名</li>
+</ul>
+</li>
+<li><p><strong>设置运行的容器名字</strong></p>
+<ul>
+<li>–name leslie</li>
+</ul>
+</li>
+<li><p><strong>获取一个终端tty</strong></p>
+<ul>
+<li>-t tty</li>
+</ul>
+</li>
+<li><p><strong>Keep STDIN open even if not attached</strong></p>
+<ul>
+<li>-i Keep STDIN open even if not attached</li>
+</ul>
+</li>
+<li><p><strong>在后台运行容器</strong></p>
+<ul>
+<li>-d Run container in background and print container ID</li>
+</ul>
+</li>
+<li><p><strong>退出时删除容器</strong></p>
+<ul>
+<li>–rm 在退出时删除容器，不能与-d同时使用。</li>
+</ul>
+</li>
+<li><p><strong>修改容器内/etc/hosts</strong></p>
+<ul>
+<li>–add-host chopedb:172.17.0.1</li>
+<li>–add-host ‘api.leslie.chope.net.cn api.leslie.chope.cc’:127.0.0.1</li>
+</ul>
+</li>
+<li><p><strong>设置环境变量</strong></p>
+<ul>
+<li>$ docker run –env VAR1=value1 –env VAR2=value2 ubuntu env | grep VAR<br>$ VAR1=value1<br>$ VAR2=value2</li>
+</ul>
+</li>
+</ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://qikang.github.io/posts/94fc0ef6/" data-id="ck8sulk2u00086mn81rst111h" class="article-share-link">Share</a>
+      <a data-url="http://qikang.github.io/posts/96f04b47/" data-id="ck8sulk2q00036mn8hjf2a7e0" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
-
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/posts/91077317/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Dockerfile 介绍
-        
-      </div>
-    </a>
   
-  
-    <a href="/posts/c27ca6ea/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/posts/91077317/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Kubernetes - install(kubeadm)</div>
+      <div class="article-nav-title">Dockerfile 介绍</div>
     </a>
   
 </nav>
