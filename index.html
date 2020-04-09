@@ -65,6 +65,106 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-container-docker-Dockerfile" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/posts/91077317/" class="article-date">
+  <time datetime="2020-04-09T04:52:59.000Z" itemprop="datePublished">2020-04-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/posts/91077317/">container-docker-Dockerfile</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>官方文档</strong> <a href="https://docs.docker.com/engine/reference/commandline/run/" target="_blank" rel="noopener">https://docs.docker.com/engine/reference/commandline/run/</a><br><strong>最佳实践</strong> <a href="https://docs.docker.com/develop/develop-images/dockerfile_best-practices/" target="_blank" rel="noopener">https://docs.docker.com/develop/develop-images/dockerfile_best-practices/</a></p>
+<ul>
+<li>FROM</li>
+<li>RUN</li>
+<li>CMD</li>
+<li>LABEL</li>
+<li>MAINTAINER</li>
+<li>ENV</li>
+<li>ADD</li>
+<li>COPY</li>
+<li>ENTRPOINT</li>
+<li>VOLUME</li>
+<li>USE</li>
+<li>WORKDIR</li>
+</ul>
+<ol>
+<li><p>FROM<br> <code>FROM ubuntu:14.04</code><br> FROM指定构建镜像的基础源镜像，如果本地没有指定就会尝试下载。</p>
+</li>
+<li><p>RUN<br> <code>RUN set -eux; echo &#39;&lt;h1&gt;Hello, Docker!&lt;/h1&gt;&#39; &gt; /usr/share/nginx/html/index.html</code><br> 具体执行的命令<code>/bin/sh -c echo &#39;&lt;h1&gt;Hello, Docker!&lt;/h1&gt;&#39; &gt; /usr/share/nginx/html/index.html</code></p>
+</li>
+<li><p>CMD<br> <code>CMD [&quot;可执行文件&quot;,&quot;参数1&quot;,&quot;参数2&quot;]</code> (exec 格式, 推荐的格式)<br> <code>CMD command param1 param2</code> (shell 格式)<br> CMD指令在Dockerfile中只能使用一次，如果有多个，则只有最后一个会生效。<br> CMD的目的是为了在启动容器时提供一个默认的命令执行选项。如果用户启动容器时指定了运行的命令，则会覆盖掉CMD指定的命令。</p>
+<ul>
+<li>shell 格式 会始终调用一个 shell 进程， 成为 /bin/sh -c 的子命令， 可执行程序不能响应 Unix 信号。</li>
+<li>exec 格式，推荐这种格式。使用这种模式时， 可以不需要 shell 进程。 让 Docker 应用的可执行程序成为容器的 PID 1 进程，可以接收 Unix 信号。比如执行 docker stop 时能够接收到 SIGTERM。</li>
+</ul>
+</li>
+<li><p>LABEL<br> <code>LABEL &lt;key&gt;=&lt;value&gt; &lt;key&gt;=&lt;value&gt; &lt;key&gt;=&lt;value&gt; ...</code><br> 用于为镜像添加元数据，元数以键值对的形式指定</p>
+</li>
+<li><p>MAINTAINER<br> <code>MAINTAINER Leslie Qi &quot;qikang451@qq.com&quot;</code><br> 指定创建镜像的用户</p>
+</li>
+<li><p>EXPOSE<br> EXPOSE 80<br> EXPOSE 8080<br> 告诉 Docker 服务端容器对外映射的本地端口，需要在 docker run 的时候使用-p或者-P选项生效。</p>
+</li>
+<li><p>ENV<br> 只能设置一个变量: <code>ENV &lt;key&gt; &lt;value&gt;</code><br> 允许一次设置多个变量: <code>ENV &lt;key1&gt;=&lt;value2&gt; &lt;key2&gt;=&lt;value2&gt; ...</code><br> docker run -e “WEB_RORT=8080” 运行时设置环境变量。</p>
+</li>
+<li><p>ADD<br> adds “test” to WORKDIR/: <code>DD test relativeDir/</code><br> adds “test” to /absoluteDir/: <code>ADD test /absoluteDir/</code><br> ADD在复制源是压缩文件的时，可把解压后的文件复制至目标路径。</p>
+<ul>
+<li>dest路径是绝对路径，如果不存在，会自动创建对应目录</li>
+<li>src的相对路径必须是 Dockerfile 所在路径的相对路径</li>
+<li>src如果是一个目录，只会复制目录下的内容，而目录本身则不会被复制</li>
+</ul>
+</li>
+<li><p>COPY<br> <code>COPY &lt;src&gt;... &lt;dest&gt;</code><br> 复制源可以文件或通配符，目标路径可以是容器的绝对路径，也可以是相对工作目录的相对路径。 使用copy指令，源文件的各种元数据都会保留。比如读、写、执行权限、文件变更时间等。ADD和COPY类似，但COPY不能使用远程文件 URLS ，复制文件推荐使用COPY。<br> dest路径是绝对路径，如果不存在，会自动创建对应目录<br> src的相对路径必须是 Dockerfile 所在路径的相对路径<br> src如果是一个目录，只会复制目录下的内容，而目录本身则不会被复制</p>
+</li>
+<li><p>ENTRYPOINT<br><code>ENTRYPOINT [&quot;executable&quot;, &quot;param1&quot;, &quot;param2&quot;]</code> (exec 格式, 推荐的格式)<br><code>ENTRYPOINT command param1 param2</code> (shell 格式)</p>
+<ul>
+<li>在 Dockerfile 中， 应该至少指定一个 CMD 或 ENTRYPOINT；</li>
+<li>shell 格式 会始终调用一个 shell 进程， 成为 /bin/sh -c 的子命令， 可执行程序不能响应 Unix 信号。</li>
+<li>exec 格式，推荐这种格式。使用这种模式时， 可以不需要 shell 进程。 让 Docker 应用的可执行程序成为容器的 PID 1 进程，可以接收 Unix 信号。比如执行 docker stop 时能够接收到 SIGTERM。</li>
+</ul>
+<p>CMD 和 ENTRYPOINT 的区别：</p>
+<ul>
+<li>将 Docker 当作可执行程序时， 应该使用 ENTRYPOINT 进行配置；</li>
+<li>CMD 可以用作 ENTRYPOINT 默认参数， 或者用作 Docker 的默认命令；</li>
+<li>CMD 可以被 docker run 传入的参数覆盖；</li>
+<li>docker run 传入的参数会附加到 ENTRYPOINT 之后， 前提是使用了 exec 格式 。</li>
+</ul>
+</li>
+<li><p>VOLUME<br><code>VOLUME [&quot;&lt;路径1&gt;&quot;,&quot;&lt;路径2&gt;&quot;...]</code><br>挂载宿主机目录到容器内<br>在 docker run 时可以用 -v /mydata:/data 覆盖 Dockerfile 中的设置。</p>
+</li>
+<li><p>USER<br><code>USER &lt;用户名：组名&gt;</code><br><code>USER nginx:nginx</code><br>指定运行容器时的用户名或 UID</p>
+</li>
+<li><p>WORKDIR<br><code>WORKDIR &lt;工作目录路径&gt;</code><br><code>WORKDIR /path/to/workdir</code><br>WORKDIR指令用来指定在docker run 时运行的目录，ENTRYPOINT 和 / 或 CMD指定的程序会在这个目录下执行。<br>docker run -w 可以覆盖WORKDIR。</p>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://qikang.github.io/posts/91077317/" data-id="ck8ssp5x60000vcn8b05x9ghg" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-paramiko-invoke-shell-run-remote-cmd" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/posts/94fc0ef6/" class="article-date">
@@ -157,7 +257,7 @@ if __name__ == '__main__':
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://qikang.github.io/posts/94fc0ef6/" data-id="ck8pyiczq0005vfn83uqwh01f" class="article-share-link">Share</a>
+      <a data-url="http://qikang.github.io/posts/94fc0ef6/" data-id="ck8ssp5xw0008vcn82ugqgsrj" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
@@ -324,7 +424,7 @@ if __name__ == '__main__':
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://qikang.github.io/posts/c27ca6ea/" data-id="ck8pyiczt0007vfn8hyh7hp0z" class="article-share-link">Share</a>
+      <a data-url="http://qikang.github.io/posts/c27ca6ea/" data-id="ck8ssp5xn0002vcn86w9a228z" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Kubernetes/" rel="tag">Kubernetes</a></li></ul>
@@ -371,7 +471,7 @@ if __name__ == '__main__':
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://qikang.github.io/posts/7eee9ede/" data-id="ck8pyiczn0002vfn80u5e7jz9" class="article-share-link">Share</a>
+      <a data-url="http://qikang.github.io/posts/7eee9ede/" data-id="ck8ssp5xt0006vcn81f5wh5t8" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sed/" rel="tag">sed</a></li></ul>
@@ -497,7 +597,7 @@ if __name__ == '__main__':
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://qikang.github.io/posts/49e9da92/" data-id="ck8pyiczi0000vfn803699knx" class="article-share-link">Share</a>
+      <a data-url="http://qikang.github.io/posts/49e9da92/" data-id="ck8ssp5xv0007vcn8bnly2qxu" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/file-descriptor/" rel="tag">file-descriptor</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/" rel="tag">shell</a></li></ul>
@@ -544,7 +644,7 @@ if __name__ == '__main__':
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://qikang.github.io/posts/4a17b156/" data-id="ck8pyiczs0006vfn873ieguz2" class="article-share-link">Share</a>
+      <a data-url="http://qikang.github.io/posts/4a17b156/" data-id="ck8ssp5xp0003vcn85unw5133" class="article-share-link">Share</a>
       
       
     </footer>
@@ -606,6 +706,10 @@ if __name__ == '__main__':
       <ul>
         
           <li>
+            <a href="/posts/91077317/">container-docker-Dockerfile</a>
+          </li>
+        
+          <li>
             <a href="/posts/94fc0ef6/">paramiko-invoke_shell-run-remote-cmd</a>
           </li>
         
@@ -619,10 +723,6 @@ if __name__ == '__main__':
         
           <li>
             <a href="/posts/49e9da92/">Linux系统文件描述符</a>
-          </li>
-        
-          <li>
-            <a href="/posts/4a17b156/">自我介绍</a>
           </li>
         
       </ul>
