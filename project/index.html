@@ -6,7 +6,7 @@
   <meta name="description" content="Test Code">
   <meta name="keyword" content="devOps kubernetes docker jenkins">
   
-    <link rel="shortcut icon" href="/css/images/logo.png">
+    <link rel="shortcut icon" href="/css/images/logo_400_400.png">
   
   <title>
     
@@ -66,7 +66,7 @@
   
 <meta name="generator" content="Hexo 4.2.0"></head>
 <div class="wechat-share">
-  <img src="/css/images/logo.png" />
+  <img src="/css/images/logo_400_400.png" />
 </div>
 
   <body>
@@ -93,12 +93,6 @@
         <li class="list-item">
           
             <a href="/archives/" class="item-link">Archives</a>
-          
-        </li>
-      
-        <li class="list-item">
-          
-            <a href="/project/" class="item-link">Projects</a>
           
         </li>
       
@@ -137,12 +131,6 @@
         
           <li class="menu-item">
             
-              <a href="/project/" class="menu-link">Projects</a>
-            
-          </li>
-        
-          <li class="menu-item">
-            
               <a href="/about/" class="menu-link">About</a>
             
           </li>
@@ -154,7 +142,7 @@
 
     <div id="article-banner">
   <h2>Projects</h2>
-  <p class="post-date">开源项目</p>
+  <!-- <p class="post-date">开源项目</p> -->
 </div>
 <main class="app-body project-app">
   <div class="card-container" id="all-project"></div>
@@ -169,7 +157,7 @@
         Accept: 'application/vnd.github.v3.raw'
       },
       type: 'get',
-      url: 'https://api.github.com/users/leslie/repos',
+      url: 'https://api.github.com/users/qikang/repos',
       success: function (data) {
         var repos = data.sort(function(a, b) {
           return (b.stargazers_count - a.stargazers_count)
