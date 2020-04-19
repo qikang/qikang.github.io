@@ -1,939 +1,407 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="Test Code">
+  <meta name="keyword" content="devOps kubernetes docker jenkins">
   
-
+    <link rel="shortcut icon" href="/css/images/logo.png">
   
-  <title>Test Code</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Test Code">
-<meta property="og:url" content="http://qikang.github.io/index.html">
-<meta property="og:site_name" content="Test Code">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:author" content="qikang">
-<meta property="article:tag" content="DevOps devops linux python docker container k8s kubernetes jenkins gitlab">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Test Code" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
+  <title>
+    
+      Test Code
+    
+  </title>
+  <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
   
 <link rel="stylesheet" href="/css/style.css">
 
+  
+    
+<link rel="stylesheet" href="/css/plugins/gitment.css">
+
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+  
+    
+<script src="/js/qrious.js"></script>
+
+  
+  
+    
+<script src="/js/gitment.js"></script>
+
+  
+  
+  
+    <!-- MathJax support START -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- MathJax support END -->
+  
+
+
+  
 <meta name="generator" content="Hexo 4.2.0"></head>
+<div class="wechat-share">
+  <img src="/css/images/logo.png" />
+</div>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Test Code</a>
-      </h1>
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <div class="logo"></div>
+      <span>Test Code</span>
+    </a>
+    <ul class="right-list">
       
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://qikang.github.io"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-Docker-Notepad" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/posts/130d8291/" class="article-date">
-  <time datetime="2020-04-19T04:00:00.000Z" itemprop="datePublished">2020-04-19</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/container/">container</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/posts/130d8291/">Docker Notepad</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>docker images<ul>
-<li>只查看 image 的tag   <br>
-		docker images --format "{{.Repository}}:{{.Tag}}"<br>
-		docker images --format "table {{.ID}}\t{{.Repository}}:{{.Tag}}"
+        <li class="list-item">
+          
+            <a href="/" class="item-link active">Home</a>
+          
         </li>
-<li>查看 image 完整hash id<br>  docker images –no-trunc</li>
-<li>使用国内镜像地址下载 docker images。这里需要重启 docker 服务  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[root@ip-172-31-22-22 ~]# cat &#x2F;etc&#x2F;docker&#x2F;daemon.json</span><br><span class="line">&#123;</span><br><span class="line">  &quot;registry-mirrors&quot;: [</span><br><span class="line">    &quot;https:&#x2F;&#x2F;registry.docker-cn.com&quot;,</span><br><span class="line">    &quot;https:&#x2F;&#x2F;dockerhub.azk8s.cn&quot;,</span><br><span class="line">    &quot;https:&#x2F;&#x2F;hub-mirror.c.163.com&quot;,</span><br><span class="line">    &quot;http:&#x2F;&#x2F;hub-mirror.c.163.com&quot;,</span><br><span class="line">    &quot;http:&#x2F;&#x2F;docker.mirrors.ustc.edu.cn&quot;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>删除本地镜像<br>  docker rmi leslie/nginx:20170305.1</li>
-<li>构建镜像<br>  docker build -t leslie/nginx:20170305.1 .</li>
-</ul>
-</li>
-<li>docker ps 查看当前的容器<ul>
-<li>查看所有容器  <br>
-    	docker ps -f "status=exited" --format={{.Names}}<br>
-		docker ps -f "status=running" --format={{.Names}}
-		</li>
-</ul>
-</li>
-</ul>
-
       
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">Tags</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">Archives</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/project/" class="item-link">Projects</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/about/" class="item-link">About</a>
+          
+        </li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
     </div>
-    <footer class="article-footer">
-      <a data-url="http://qikang.github.io/posts/130d8291/" data-id="ck96ndda5000299n811q9775o" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/docker/" rel="tag">docker</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-container-docker-run" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/posts/96f04b47/" class="article-date">
-  <time datetime="2020-04-09T14:16:55.000Z" itemprop="datePublished">2020-04-09</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/container/">container</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+    <div class="menu-mask">
+      <ul class="menu-list">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/posts/96f04b47/">Docker run 常用选项</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>官方文档：</strong> <a href="https://docs.docker.com/engine/reference/commandline/run/" target="_blank" rel="noopener">https://docs.docker.com/engine/reference/commandline/run/</a><br><strong>docker 论坛文档：</strong> <a href="http://dockone.io/article/152" target="_blank" rel="noopener">http://dockone.io/article/152</a></p>
-<h4 id="这里只是列举常用的，不做详细介绍。"><a href="#这里只是列举常用的，不做详细介绍。" class="headerlink" title="这里只是列举常用的，不做详细介绍。"></a>这里只是列举常用的，不做详细介绍。</h4><h5 id="启动一个容器："><a href="#启动一个容器：" class="headerlink" title="启动一个容器："></a><strong>启动一个容器：</strong></h5><p>$ docker run \<br>-d \<br>–name leslie \<br>-h leslie \<br>-p 9002:80 \<br>-v /var/www/html/leslie/:/var/www/html/ \<br>–add-host ‘chopedb test.abc.com’:172.17.0.1 \<br>nginx:latest</p>
-<h5 id="进入容器内："><a href="#进入容器内：" class="headerlink" title="进入容器内："></a><strong>进入容器内：</strong></h5><ul>
-<li><p>运行一个临时容器，然后运行 /bin/bash<br>$ docker run -it –rm redis /bin/bash</p>
-</li>
-<li><p>在一个已经存在的容器上运行/bin/bash<br>$ docker exec -it leslie /bin/bash</p>
-</li>
-</ul>
-<h5 id="常用选项"><a href="#常用选项" class="headerlink" title="常用选项"></a><strong>常用选项</strong></h5><ol>
-<li><p><strong>绑定容器的端口到宿主机</strong></p>
-<ul>
-<li>-P（大写），把Dockerfile中EXPOSE设置的暴露端口都映射到宿主机。</li>
-</ul>
-<p> -P 8080:80，宿主机8080和容器80映射</p>
-</li>
-<li><p><strong>设置容器的主机名</strong></p>
-<ul>
-<li>–hostname 或 -h 设置容器的主机名</li>
-</ul>
-</li>
-<li><p><strong>设置运行的容器名字</strong></p>
-<ul>
-<li>–name leslie</li>
-</ul>
-</li>
-<li><p><strong>获取一个终端tty</strong></p>
-<ul>
-<li>-t tty</li>
-</ul>
-</li>
-<li><p><strong>Keep STDIN open even if not attached</strong></p>
-<ul>
-<li>-i Keep STDIN open even if not attached</li>
-</ul>
-</li>
-<li><p><strong>在后台运行容器</strong></p>
-<ul>
-<li>-d Run container in background and print container ID</li>
-</ul>
-</li>
-<li><p><strong>退出时删除容器</strong></p>
-<ul>
-<li>–rm 在退出时删除容器，不能与-d同时使用。</li>
-</ul>
-</li>
-<li><p><strong>修改容器内/etc/hosts</strong></p>
-<ul>
-<li>–add-host chopedb:172.17.0.1</li>
-<li>–add-host ‘api.leslie.chope.net.cn api.leslie.chope.cc’:127.0.0.1</li>
-</ul>
-</li>
-<li><p><strong>设置环境变量</strong></p>
-<ul>
-<li>$ docker run –env VAR1=value1 –env VAR2=value2 ubuntu env | grep VAR<br>$ VAR1=value1<br>$ VAR2=value2</li>
-</ul>
-</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://qikang.github.io/posts/96f04b47/" data-id="ck96ndda8000699n84ri2e4vk" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-container-docker-Dockerfile" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/posts/91077317/" class="article-date">
-  <time datetime="2020-04-09T04:52:59.000Z" itemprop="datePublished">2020-04-09</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/container/">container</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/posts/91077317/">Dockerfile 介绍</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>官方文档</strong> <a href="https://docs.docker.com/engine/reference/commandline/run/" target="_blank" rel="noopener">https://docs.docker.com/engine/reference/commandline/run/</a><br><strong>最佳实践</strong> <a href="https://docs.docker.com/develop/develop-images/dockerfile_best-practices/" target="_blank" rel="noopener">https://docs.docker.com/develop/develop-images/dockerfile_best-practices/</a></p>
-<ul>
-<li>FROM</li>
-<li>RUN</li>
-<li>CMD</li>
-<li>LABEL</li>
-<li>MAINTAINER</li>
-<li>ENV</li>
-<li>ADD</li>
-<li>COPY</li>
-<li>ENTRPOINT</li>
-<li>VOLUME</li>
-<li>USE</li>
-<li>WORKDIR</li>
-</ul>
-<ol>
-<li><p>FROM<br> <code>FROM ubuntu:14.04</code><br> FROM指定构建镜像的基础源镜像，如果本地没有指定就会尝试下载。</p>
-</li>
-<li><p>RUN<br> <code>RUN set -eux; echo &#39;&lt;h1&gt;Hello, Docker!&lt;/h1&gt;&#39; &gt; /usr/share/nginx/html/index.html</code><br> 具体执行的命令<code>/bin/sh -c echo &#39;&lt;h1&gt;Hello, Docker!&lt;/h1&gt;&#39; &gt; /usr/share/nginx/html/index.html</code></p>
-</li>
-<li><p>CMD<br> <code>CMD [&quot;可执行文件&quot;,&quot;参数1&quot;,&quot;参数2&quot;]</code> (exec 格式, 推荐的格式)<br> <code>CMD command param1 param2</code> (shell 格式)<br> CMD指令在Dockerfile中只能使用一次，如果有多个，则只有最后一个会生效。<br> CMD的目的是为了在启动容器时提供一个默认的命令执行选项。如果用户启动容器时指定了运行的命令，则会覆盖掉CMD指定的命令。</p>
-<ul>
-<li>shell 格式 会始终调用一个 shell 进程， 成为 /bin/sh -c 的子命令， 可执行程序不能响应 Unix 信号。</li>
-<li>exec 格式，推荐这种格式。使用这种模式时， 可以不需要 shell 进程。 让 Docker 应用的可执行程序成为容器的 PID 1 进程，可以接收 Unix 信号。比如执行 docker stop 时能够接收到 SIGTERM。</li>
-</ul>
-</li>
-<li><p>LABEL<br> <code>LABEL &lt;key&gt;=&lt;value&gt; &lt;key&gt;=&lt;value&gt; &lt;key&gt;=&lt;value&gt; ...</code><br> 用于为镜像添加元数据，元数以键值对的形式指定</p>
-</li>
-<li><p>MAINTAINER<br> <code>MAINTAINER Leslie Qi &quot;qikang451@qq.com&quot;</code><br> 指定创建镜像的用户</p>
-</li>
-<li><p>EXPOSE<br> EXPOSE 80<br> EXPOSE 8080<br> 告诉 Docker 服务端容器对外映射的本地端口，需要在 docker run 的时候使用-p或者-P选项生效。</p>
-</li>
-<li><p>ENV<br> 只能设置一个变量: <code>ENV &lt;key&gt; &lt;value&gt;</code><br> 允许一次设置多个变量: <code>ENV &lt;key1&gt;=&lt;value2&gt; &lt;key2&gt;=&lt;value2&gt; ...</code><br> docker run -e “WEB_RORT=8080” 运行时设置环境变量。</p>
-</li>
-<li><p>ADD<br> adds “test” to WORKDIR/: <code>DD test relativeDir/</code><br> adds “test” to /absoluteDir/: <code>ADD test /absoluteDir/</code><br> ADD在复制源是压缩文件的时，可把解压后的文件复制至目标路径。</p>
-<ul>
-<li>dest路径是绝对路径，如果不存在，会自动创建对应目录</li>
-<li>src的相对路径必须是 Dockerfile 所在路径的相对路径</li>
-<li>src如果是一个目录，只会复制目录下的内容，而目录本身则不会被复制</li>
-</ul>
-</li>
-<li><p>COPY<br> <code>COPY &lt;src&gt;... &lt;dest&gt;</code><br> 复制源可以文件或通配符，目标路径可以是容器的绝对路径，也可以是相对工作目录的相对路径。 使用copy指令，源文件的各种元数据都会保留。比如读、写、执行权限、文件变更时间等。ADD和COPY类似，但COPY不能使用远程文件 URLS ，复制文件推荐使用COPY。<br> dest路径是绝对路径，如果不存在，会自动创建对应目录<br> src的相对路径必须是 Dockerfile 所在路径的相对路径<br> src如果是一个目录，只会复制目录下的内容，而目录本身则不会被复制</p>
-</li>
-<li><p>ENTRYPOINT<br><code>ENTRYPOINT [&quot;executable&quot;, &quot;param1&quot;, &quot;param2&quot;]</code> (exec 格式, 推荐的格式)<br><code>ENTRYPOINT command param1 param2</code> (shell 格式)</p>
-<ul>
-<li>在 Dockerfile 中， 应该至少指定一个 CMD 或 ENTRYPOINT；</li>
-<li>shell 格式 会始终调用一个 shell 进程， 成为 /bin/sh -c 的子命令， 可执行程序不能响应 Unix 信号。</li>
-<li>exec 格式，推荐这种格式。使用这种模式时， 可以不需要 shell 进程。 让 Docker 应用的可执行程序成为容器的 PID 1 进程，可以接收 Unix 信号。比如执行 docker stop 时能够接收到 SIGTERM。</li>
-</ul>
-<p>CMD 和 ENTRYPOINT 的区别：</p>
-<ul>
-<li>将 Docker 当作可执行程序时， 应该使用 ENTRYPOINT 进行配置；</li>
-<li>CMD 可以用作 ENTRYPOINT 默认参数， 或者用作 Docker 的默认命令；</li>
-<li>CMD 可以被 docker run 传入的参数覆盖；</li>
-<li>docker run 传入的参数会附加到 ENTRYPOINT 之后， 前提是使用了 exec 格式 。</li>
-</ul>
-</li>
-<li><p>VOLUME<br><code>VOLUME [&quot;&lt;路径1&gt;&quot;,&quot;&lt;路径2&gt;&quot;...]</code><br>挂载宿主机目录到容器内<br>在 docker run 时可以用 -v /mydata:/data 覆盖 Dockerfile 中的设置。</p>
-</li>
-<li><p>USER<br><code>USER &lt;用户名：组名&gt;</code><br><code>USER nginx:nginx</code><br>指定运行容器时的用户名或 UID</p>
-</li>
-<li><p>WORKDIR<br><code>WORKDIR &lt;工作目录路径&gt;</code><br><code>WORKDIR /path/to/workdir</code><br>WORKDIR指令用来指定在docker run 时运行的目录，ENTRYPOINT 和 / 或 CMD指定的程序会在这个目录下执行。<br>docker run -w 可以覆盖WORKDIR。</p>
-</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://qikang.github.io/posts/91077317/" data-id="ck96ndda0000099n8gckq71tf" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/docker/" rel="tag">docker</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-paramiko-invoke-shell-run-remote-cmd" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/posts/94fc0ef6/" class="article-date">
-  <time datetime="2020-04-07T13:35:44.000Z" itemprop="datePublished">2020-04-07</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/python/">python</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/posts/94fc0ef6/">使用 paramiko 库远程执行 root 命令 - invoke_shell</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>参考网址：</strong> <a href="http://docs.paramiko.org/en/stable/api/channel.html" target="_blank" rel="noopener">http://docs.paramiko.org/en/stable/api/channel.html</a></p>
-<ul>
-<li>需求：<ul>
-<li>使用普通用户登录到远程服务器</li>
-<li>sudo到root用户，并执行指定命令</li>
-<li>获取命令的执行结果</li>
-</ul>
-</li>
-</ul>
-<pre><code>
-#!/usr/bin/env python3
-import paramiko,time
-
-command = 'ls -al /tmp/ \n'
-buff_size = 1024
-wait_time = 1
-
-def ssh_for_root_cmd_recv(channel,cmd):
-    buff = bytes()
-    channel.send(cmd)
-    time.sleep(wait_time)
-
-    while channel.recv_ready():
-        resp = channel.recv(buff_size)
-        buff += resp
-
-    buff_list = (buff.decode('utf-8')).split('\n')
-
-    return (buff_list[1:-1])
-
-
-def ssh_for_root_cmd_run():
-    ssh = paramiko.SSHClient()
-    ssh.load_system_host_keys()
-    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    ssh.connect('localhost', port=22, username='user1', key_filename='/home/user1/.ssh/test.pem', timeout=3,)
-    chan = ssh.invoke_shell()
-
-    # 过滤登录时的信息。
-    time.sleep(wait_time)
-    while chan.recv_ready():
-        chan.recv(buff_size)
-        # print((chan.recv(buff_size)).decode('utf-8'))
-
-    # 切换到root用户
-    ssh_for_root_cmd_recv(chan,'sudo su - \n')
-
-    # 运行需要执行的root命令。
-    cmd_resoult = ssh_for_root_cmd_recv(chan,command)
-
-    chan.close()
-    ssh.close()
-
-    return (cmd_resoult)
-
-if __name__ == '__main__':
-    for resoult_line in ssh_for_root_cmd_run():
-        print (resoult_line)
-
-</code></pre>
-
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://qikang.github.io/posts/94fc0ef6/" data-id="ck96nddag000i99n8dr96596t" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-install-k8s-for-kubeadmin" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/posts/c27ca6ea/" class="article-date">
-  <time datetime="2020-04-04T14:09:16.000Z" itemprop="datePublished">2020-04-04</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Kubernetes/">Kubernetes</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/posts/c27ca6ea/">Kubernetes - install(kubeadm)</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <!-- ### Kubernetes - install(kubeadm) -->
-
-<p><strong>参考网址:</strong> <a href="https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/" target="_blank" rel="noopener">https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/</a></p>
-<ol>
-<li><p>准备阶段：</p>
-<ol>
-<li>节点间时间同步</li>
-<li>关闭selinux</li>
-<li>关闭防火墙</li>
-<li>设置/etc/hosts手动解析</li>
-<li>梯子自备。在下载image时需要用到，或者可以找国内已经同步的源。</li>
-</ol>
-</li>
-<li><p>设置yum源</p>
-<ol>
-<li>从阿里云安装docker和kubernetes<br><a href="https://opsx.alibaba.com/mirror" target="_blank" rel="noopener">https://opsx.alibaba.com/mirror</a><br>docker<br>kubernetes<br>yum install -y kubelet kubeadm kubectl docker<br>yum install kubelet-1.14.8 kubeadm-1.14.8 kubectl-1.14.8 -y<br>systemctl enable kubelet &amp;&amp; systemctl start kubelet</li>
-</ol>
-</li>
-<li><p>确保以下两个参数值为1，默认为1</p>
-<ol>
-<li>cat /proc/sys/net/bridge/bridge-nf-call-ip6tables</li>
-<li>cat /proc/sys/net/bridge/bridge-nf-call-iptables<br>net.bridge.bridge-nf-call-ip6tables = 1<br>net.bridge.bridge-nf-call-iptables = 1</li>
-<li>vim  /etc/sysctl.conf</li>
-</ol>
-</li>
-<li><p>在kernel中需要打开ipvs模块，/etc/sysconfig/kubelet<br> KUBE_PROXY_MODE=ipvs</p>
-</li>
-<li><p>在kublet中禁用swap<br> /etc/sysconfig/kubelet<br> KUBELET_EXTRA_ARGS=”–fail-swap-on=false”</p>
-</li>
-<li><p>一颗CPU<br> –ignore-preflight-errors=NumCPU</p>
-</li>
-<li><p>初始化kubeadm<br> kubeadm init –pod-network-cidr=10.244.0.0/16 –service-cidr=10.96.0.0/12 –ignore-preflight-errors=all<br> kubeadm init –pod-network-cidr=10.244.0.0/16 –service-cidr=10.96.0.0/12 –ignore-preflight-errors=Swap –ignore-preflight-errors=NumCPU</p>
-</li>
-<li><p>提前下载镜像<br> kubeadm config images list</p>
-</li>
-<li><p>Your Kubernetes control-plane has initialized successfully!<br> 在master上执行，创建root初始化目录<br> [root@master ~]# mkdir -p $HOME/.kube<br> [root@master ~]# cp -i /etc/kubernetes/admin.conf $HOME/.kube/config<br> [root@master ~]# chown $(id -u):$(id -g) $HOME/.kube/config</p>
-</li>
-<li><p>在master节点上安装flannel<br><a href="https://github.com/coreos/flannel" target="_blank" rel="noopener">https://github.com/coreos/flannel</a><br>kubectl apply -f <a href="https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml" target="_blank" rel="noopener">https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml</a><br>wget <a href="https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml" target="_blank" rel="noopener">https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml</a><br>kubectl apply -f kube-flannel.yml</p>
-</li>
-<li><p>install node1 software</p>
-<ol>
-<li>yum install -y docker-ce kubelet kubeadm</li>
-<li>把所有docker images也下载上</li>
-</ol>
-</li>
-<li><p>相关命令<br>kubectl describe pod kube-flannel-ds-amd64-47jl8 –namespace=kube-system<br>kubectl get all –all-namespaces<br>kubectl get nodes<br>kubectl get ns<br>kubectl get cs</p>
-</li>
-</ol>
-<p><em>至此安装介绍已结束。</em></p>
-<p><strong>备注：</strong></p>
-<ul>
-<li><p>docker加速</p>
-<ul>
-<li><a href="https://www.daocloud.io/mirror" target="_blank" rel="noopener">https://www.daocloud.io/mirror</a></li>
-<li>curl -sSL <a href="https://get.daocloud.io/daotools/set_mirror.sh" target="_blank" rel="noopener">https://get.daocloud.io/daotools/set_mirror.sh</a> | sh -s <a href="http://f1461db2.m.daocloud.io" target="_blank" rel="noopener">http://f1461db2.m.daocloud.io</a></li>
-<li><a href="https://dashboard.daocloud.io/orgs/qikang/packages/explore" target="_blank" rel="noopener">https://dashboard.daocloud.io/orgs/qikang/packages/explore</a> qikang qk3322451</li>
-<li>systemctl  daemon-reload</li>
-<li><a href="https://blog.51cto.com/ghbsunny/2162205" target="_blank" rel="noopener">https://blog.51cto.com/ghbsunny/2162205</a></li>
-</ul>
-</li>
-<li><p>设置docker的代理网址</p>
-<ul>
-<li>[root@master ~]# vim /usr/lib/systemd/system/docker.service</li>
-<li>[root@master ~]# grep -i env /usr/lib/systemd/system/docker.service</li>
-<li>Environment=”HTTPS_PROXY=<a href="http://www.ik8s.io:10080&quot;">http://www.ik8s.io:10080&quot;</a></li>
-<li>Environment=”HTTP_PROXY=<a href="http://www.ik8s.io:10080&quot;">http://www.ik8s.io:10080&quot;</a></li>
-<li>Environment=”NO_PROXY=127.0.0.0/8,172.20.0.0/16”</li>
-</ul>
-</li>
-<li><p>版本记录</p>
-<ul>
-<li>kube-apiserver:v1.14.1</li>
-<li>kube-controller-manager:v1.14.1</li>
-<li>kube-scheduler:v1.14.1</li>
-<li>kube-proxy:v1.14.1</li>
-<li>pause:3.1</li>
-<li>etcd:3.3.10</li>
-<li>coredns:1.3.1</li>
-</ul>
-</li>
-<li><p>设置docker</p>
-<ul>
-<li>[root@node1 ~]# cat /etc/docker/daemon.json</li>
-<li>{“registry-mirrors”: [“<a href="http://f1361db2.m.daocloud.io&quot;]}">http://f1361db2.m.daocloud.io&quot;]}</a></li>
-<li>[root@node1 ~]# grep -i env /usr/lib/systemd/system/docker.service</li>
-<li>Environment=”NO_PROXY=127.0.0.0/8,172.20.0.0/16”</li>
-<li>systemctl enable docker</li>
-<li>systemctl enable kubelet</li>
-</ul>
-</li>
-<li><p>下载镜像</p>
-<ul>
-<li><p>docker pull registry.cn-hangzhou.aliyuncs.com/google_containers/kube-controller-manager:v1.14.2 </p>
-</li>
-<li><p>docker pull registry.cn-hangzhou.aliyuncs.com/google_containers/kube-scheduler:v1.14.2 </p>
-</li>
-<li><p>docker pull registry.cn-hangzhou.aliyuncs.com/google_containers/kube-proxy:v1.14.2 </p>
-</li>
-<li><p>docker pull registry.cn-hangzhou.aliyuncs.com/google_containers/pause:3.1 </p>
-</li>
-<li><p>docker pull registry.cn-hangzhou.aliyuncs.com/google_containers/etcd:3.3.10 </p>
-</li>
-<li><p>docker pull registry.cn-hangzhou.aliyuncs.com/google_containers/coredns:1.3.1 </p>
-</li>
-<li><p>docker pull registry.cn-hangzhou.aliyuncs.com/google_containers/kube-apiserver:v1.14.2 </p>
-</li>
-<li><p>docker tag registry.cn-hangzhou.aliyuncs.com/google_containers/kube-controller-manager:v1.14.2 k8s.gcr.io/kube-controller-manager:v1.14.2 </p>
-</li>
-<li><p>docker tag registry.cn-hangzhou.aliyuncs.com/google_containers/kube-scheduler:v1.14.2 k8s.gcr.io/kube-scheduler:v1.14.2 </p>
-</li>
-<li><p>docker tag registry.cn-hangzhou.aliyuncs.com/google_containers/kube-proxy:v1.14.2 k8s.gcr.io/kube-proxy:v1.14.2 </p>
-</li>
-<li><p>docker tag registry.cn-hangzhou.aliyuncs.com/google_containers/pause:3.1 k8s.gcr.io/pause:3.1 </p>
-</li>
-<li><p>docker tag registry.cn-hangzhou.aliyuncs.com/google_containers/etcd:3.3.10 k8s.gcr.io/etcd:3.3.10 </p>
-</li>
-<li><p>docker tag registry.cn-hangzhou.aliyuncs.com/google_containers/coredns:1.3.1 k8s.gcr.io/coredns:1.3.1 </p>
-</li>
-<li><p>docker tag registry.cn-hangzhou.aliyuncs.com/google_containers/kube-apiserver:v1.14.2 k8s.gcr.io/kube-apiserver:v1.14.2</p>
-</li>
-</ul>
-</li>
-<li><p>下载镜像脚本<br>  <code>for i in `kubeadm config images list`; do</code><br>  <code>imageName=${i#k8s.gcr.io/}</code><br>  <code>echo $imageName</code><br>  <code>docker pull registry.aliyuncs.com/google_containers/$imageName</code><br>  <code>docker tag registry.aliyuncs.com/google_containers/$imageName k8s.gcr.io/$imageName</code><br>  <code>docker rmi registry.aliyuncs.com/google_containers/$imageName</code><br>  <code>done;</code></p>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://qikang.github.io/posts/c27ca6ea/" data-id="ck96ndda9000799n87oes65wn" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Kubernetes/" rel="tag">Kubernetes</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-linux-sed" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/posts/7eee9ede/" class="article-date">
-  <time datetime="2020-04-03T15:05:49.000Z" itemprop="datePublished">2020-04-03</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/linux/">linux</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/posts/7eee9ede/">linux sed</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <img src="/images/sed-1.png" align=left>
-
-<h3 id="打印指定行"><a href="#打印指定行" class="headerlink" title="打印指定行"></a>打印指定行</h3><p>sed -n ‘2,6p’ test.file</p>
-<h3 id="删除指定行"><a href="#删除指定行" class="headerlink" title="删除指定行"></a>删除指定行</h3><p>sed -i ‘3,5d’ test.file</p>
-<h3 id="删除匹配行"><a href="#删除匹配行" class="headerlink" title="删除匹配行"></a>删除匹配行</h3><p>sed ‘/$#print/d’ t.py</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://qikang.github.io/posts/7eee9ede/" data-id="ck96nddad000c99n82uuxeci6" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sed/" rel="tag">sed</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-linux-system-file-descriptor" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/posts/49e9da92/" class="article-date">
-  <time datetime="2020-04-03T14:38:54.000Z" itemprop="datePublished">2020-04-03</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/linux/">linux</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/posts/49e9da92/">Linux 系统文件描述符</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h5 id="Linux系统文件描述符"><a href="#Linux系统文件描述符" class="headerlink" title="Linux系统文件描述符"></a>Linux系统文件描述符</h5><p>0、1、2 是系统保留的三个文件描述符，分别对应标准输入、标准输出、标准错误</p>
-<ul>
-<li>0 -&gt; stdin</li>
-<li>1 -&gt; stdout</li>
-<li>2 -&gt; stderr</li>
-</ul>
-<hr>
-<h5 id="系统中有12个文件描述符，0、1、2是系统保留的。我们可以任意使用文件描述符3到9。"><a href="#系统中有12个文件描述符，0、1、2是系统保留的。我们可以任意使用文件描述符3到9。" class="headerlink" title="系统中有12个文件描述符，0、1、2是系统保留的。我们可以任意使用文件描述符3到9。"></a>系统中有12个文件描述符，0、1、2是系统保留的。我们可以任意使用文件描述符3到9。</h5><hr>
-<h6 id="输出重定向"><a href="#输出重定向" class="headerlink" title="输出重定向"></a>输出重定向</h6><table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Command &gt; filename</td>
-<td>把标准输出重定向到一个新文件中</td>
-</tr>
-<tr>
-<td>Command &gt;&gt; filename</td>
-<td>把标准输出重定向到一个文件中（追加）</td>
-</tr>
-<tr>
-<td>Command &gt; filename</td>
-<td>把标准输出重定向到一个文件中</td>
-</tr>
-<tr>
-<td>Command &gt; filename 2&gt;&amp;1</td>
-<td>把标准输出和错误一起重定向到一个文件中</td>
-</tr>
-<tr>
-<td>Command 2 &gt; filename</td>
-<td>把标准错误重定向到一个文件中</td>
-</tr>
-<tr>
-<td>Command 2 &gt;&gt; filename</td>
-<td>把标准输出重定向到一个文件中（追加）</td>
-</tr>
-<tr>
-<td>Command &gt;&gt; filename 2&gt;&amp;1</td>
-<td>把标准输出和错误一起重定向到一个文件（追加）</td>
-</tr>
-</tbody></table>
-<h6 id="输入重定向"><a href="#输入重定向" class="headerlink" title="输入重定向"></a>输入重定向</h6><table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Command &lt; filename &gt; filename2</td>
-<td>Command命令以filename文件作为标准输入，以filename2文件作为标准输出</td>
-</tr>
-<tr>
-<td>Command &lt; filename</td>
-<td>Command命令以filename文件作为标准输入</td>
-</tr>
-<tr>
-<td>Command &lt;&lt; delimiter</td>
-<td>从标准输入中读入，知道遇到delimiter分界符</td>
-</tr>
-</tbody></table>
-<h6 id="绑定重定向"><a href="#绑定重定向" class="headerlink" title="绑定重定向"></a>绑定重定向</h6><table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Command &gt;&amp;m</td>
-<td>把标准输出重定向到文件描述符m中</td>
-</tr>
-<tr>
-<td>Command &lt; &amp;</td>
-<td>-关闭标准输入</td>
-</tr>
-<tr>
-<td>Command 0&gt;&amp;</td>
-<td>-同上</td>
-</tr>
-</tbody></table>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://qikang.github.io/posts/49e9da92/" data-id="ck96nddae000d99n8e0x65bky" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/file-descriptor/" rel="tag">file-descriptor</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/" rel="tag">shell</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-itself" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/posts/4a17b156/" class="article-date">
-  <time datetime="2020-04-03T11:11:19.077Z" itemprop="datePublished">2020-04-03</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D/">自我介绍</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/posts/4a17b156/">自我介绍</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>&emsp;&emsp;我是众多互联网工程师中的一个小兵，没有名气。但我自认为自己是比价较真的人，对技术从来没有害怕过。我不会，但在用的时候绝对用好。互联网的技术实在太多了，不会有人什么都会，少数全球唯一的大牛除外。我是没有上过什么培训班，学校学习的更是无用。现在明白的这些都是从 Baidu、Google、互联网或者其他付费资料获取的，真心的感谢那些帮助过我的那些博客文章，官方文档、Github 等等。<br>&emsp;&emsp;想写博客其实很久了，一直没有时间和精力去找找看看什么工具适合写博客。最近有点儿时间了，查了查资料，决定用<a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>。上手非常快，很方便。同时配合<a href="https://pages.github.com/" target="_blank" rel="noopener">Github Page</a>，算是很廉价的方案了。</p>
-<ul>
-<li><a href="https://github.com/qikang" target="_blank" rel="noopener">https://github.com/qikang</a></li>
-<li><a href="mailto:qikang451@qq.com">qikang451@qq.com</a></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://qikang.github.io/posts/4a17b156/" data-id="ck96nddab000899n82axx8vkr" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">分类</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Kubernetes/">Kubernetes</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/container/">container</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/linux/">linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D/">自我介绍</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Kubernetes/" rel="tag">Kubernetes</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/file-descriptor/" rel="tag">file-descriptor</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sed/" rel="tag">sed</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shell/" rel="tag">shell</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签云</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/Kubernetes/" style="font-size: 10px;">Kubernetes</a> <a href="/tags/docker/" style="font-size: 20px;">docker</a> <a href="/tags/file-descriptor/" style="font-size: 10px;">file-descriptor</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/sed/" style="font-size: 10px;">sed</a> <a href="/tags/shell/" style="font-size: 10px;">shell</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">归档</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">四月 2020</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">最新文章</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/posts/130d8291/">Docker Notepad</a>
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link mobile-active">Home</a>
+            
           </li>
         
-          <li>
-            <a href="/posts/96f04b47/">Docker run 常用选项</a>
+          <li class="menu-item">
+            
+              <a href="/tags/" class="menu-link">Tags</a>
+            
           </li>
         
-          <li>
-            <a href="/posts/91077317/">Dockerfile 介绍</a>
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">Archives</a>
+            
           </li>
         
-          <li>
-            <a href="/posts/94fc0ef6/">使用 paramiko 库远程执行 root 命令 - invoke_shell</a>
+          <li class="menu-item">
+            
+              <a href="/project/" class="menu-link">Projects</a>
+            
           </li>
         
-          <li>
-            <a href="/posts/c27ca6ea/">Kubernetes - install(kubeadm)</a>
+          <li class="menu-item">
+            
+              <a href="/about/" class="menu-link">About</a>
+            
           </li>
         
       </ul>
     </div>
   </div>
+</header>
 
+    <main class="app-body">
   
-</aside>
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/posts/130d8291/">Docker Notepad</a>
+      </h2>
+      <p class="article-date">2020年4月19日</p>
+      
+        
+  <a href="/tags#docker" >
+    <span class="tag-code">docker</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          
+docker images
+只查看 image 的tag   
+		docker images --format "{{.Repository}}:{{.Tag}}"
+		docker images --format "table {{.ID}}\t{{.Repository}}:{{.T ...
         
       </div>
-      <footer id="footer">
+      <a class="more" href="/posts/130d8291/">Read more</a>
+    </article>
   
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2020 qikang<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/posts/96f04b47/">Docker run 常用选项</a>
+      </h2>
+      <p class="article-date">2020年4月9日</p>
+      
+      <div class="article-summary">
+        
+          官方文档： https://docs.docker.com/engine/reference/commandline/run/docker 论坛文档： http://dockone.io/article/152
+这里只是列举常用的，不做详细介绍。启动一个容器：$ docker run \-d ...
+        
+      </div>
+      <a class="more" href="/posts/96f04b47/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/posts/91077317/">Dockerfile 介绍</a>
+      </h2>
+      <p class="article-date">2020年4月9日</p>
+      
+        
+  <a href="/tags#docker" >
+    <span class="tag-code">docker</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          官方文档 https://docs.docker.com/engine/reference/commandline/run/最佳实践 https://docs.docker.com/develop/develop-images/dockerfile_best-practices/
+
+FROM ...
+        
+      </div>
+      <a class="more" href="/posts/91077317/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/posts/94fc0ef6/">使用 paramiko 库远程执行 root 命令 - invoke_shell</a>
+      </h2>
+      <p class="article-date">2020年4月7日</p>
+      
+        
+  <a href="/tags#python" >
+    <span class="tag-code">python</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          参考网址： http://docs.paramiko.org/en/stable/api/channel.html
+
+需求：
+使用普通用户登录到远程服务器
+sudo到root用户，并执行指定命令
+获取命令的执行结果
+
+
+
+
+#!/usr/bin/env python3
+import para ...
+        
+      </div>
+      <a class="more" href="/posts/94fc0ef6/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/posts/c27ca6ea/">Kubernetes - install(kubeadm)</a>
+      </h2>
+      <p class="article-date">2020年4月4日</p>
+      
+        
+  <a href="/tags#Kubernetes" >
+    <span class="tag-code">Kubernetes</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          
+
+参考网址: https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/
+
+准备阶段：
+
+节点间时间同步
+关闭selinux
+关闭防火墙
+设置/etc/hosts ...
+        
+      </div>
+      <a class="more" href="/posts/c27ca6ea/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/posts/7eee9ede/">linux sed</a>
+      </h2>
+      <p class="article-date">2020年4月3日</p>
+      
+        
+  <a href="/tags#sed" >
+    <span class="tag-code">sed</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          
+
+打印指定行sed -n ‘2,6p’ test.file
+删除指定行sed -i ‘3,5d’ test.file
+删除匹配行sed ‘/$#print/d’ t.py
+
+        
+      </div>
+      <a class="more" href="/posts/7eee9ede/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/posts/49e9da92/">Linux 系统文件描述符</a>
+      </h2>
+      <p class="article-date">2020年4月3日</p>
+      
+        
+  <a href="/tags#file-descriptor" >
+    <span class="tag-code">file-descriptor</span>
+  </a>
+
+  <a href="/tags#shell" >
+    <span class="tag-code">shell</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          Linux系统文件描述符0、1、2 是系统保留的三个文件描述符，分别对应标准输入、标准输出、标准错误
+
+0 -&gt; stdin
+1 -&gt; stdout
+2 -&gt; stderr
+
+
+系统中有12个文件描述符，0、1、2是系统保留的。我们可以任意使用文件描述符3到9。
+输出重定向 ...
+        
+      </div>
+      <a class="more" href="/posts/49e9da92/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/posts/4a17b156/">自我介绍</a>
+      </h2>
+      <p class="article-date">2020年4月3日</p>
+      
+      <div class="article-summary">
+        
+          &emsp;&emsp;我是众多互联网工程师中的一个小兵，没有名气。但我自认为自己是比价较真的人，对技术从来没有害怕过。我不会，但在用的时候绝对用好。互联网的技术实在太多了，不会有人什么都会，少数全球唯一的大牛除外。我是没有上过什么培训班，学校学习的更是无用。现在明白的这些都是从 Baidu ...
+        
+      </div>
+      <a class="more" href="/posts/4a17b156/">Read more</a>
+    </article>
+  
+
+  
+</main>
+
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+  <p class="copyright">
+    &copy; 2020 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    <br>
+    Theme by <a href="https://github.com/yanm1ng" target="_blank" rel="noopener">yanm1ng</a>
+  </p>
 </footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
 
-
-  
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-
-  
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
+<script>
+  var hasLine = 'true';
+  async("//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine === 'false') {
+        figure.find('.gutter').hide();
+      }
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<!-- Baidu Tongji -->
 
 
 <script src="/js/script.js"></script>
 
 
-
-
-  </div>
-</body>
+  </body>
 </html>
