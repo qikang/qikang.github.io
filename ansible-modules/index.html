@@ -1,0 +1,170 @@
+<!doctype html><html lang=zh dir=auto data-theme=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>ansible - modules | 西康的博客</title><meta name=keywords content="ansible,DevOps"><meta name=description content="Ansible 常用模块实战:command、copy、debug、file、service、shell 等模块的用法与典型场景。"><meta name=author content="西康"><link rel=canonical href=https://qikang451.cn/ansible-modules/><link crossorigin=anonymous href=/assets/css/stylesheet.11ca2fc00d33c0b7f4f9cc42ab22864b3589feddce663595ba5c70e7b6cada85.css integrity="sha256-EcovwA0zwLf0+cxCqyKGSzWJ/t3OZjWVulxw57bK2oU=" rel="preload stylesheet" as=style><link rel=icon href=https://qikang451.cn/img/p.jpg><link rel=icon type=image/png sizes=16x16 href=https://qikang451.cn/img/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://qikang451.cn/img/favicon-32x32.png><link rel=apple-touch-icon href=https://qikang451.cn/img/apple-touch-icon.png><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=zh href=https://qikang451.cn/ansible-modules/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51);color-scheme:dark}.list{background:var(--theme)}.toc{background:var(--entry)}}</style></noscript><script>localStorage.getItem("pref-theme")==="dark"?document.querySelector("html").dataset.theme="dark":localStorage.getItem("pref-theme")==="light"?document.querySelector("html").dataset.theme="light":window.matchMedia("(prefers-color-scheme: dark)").matches?document.querySelector("html").dataset.theme="dark":document.querySelector("html").dataset.theme="light"</script><script defer src=/js/logo-align.min.d56dba71163b17162f814dc7807dd3006fdb1f58a0b508af4f9713824592ab69.js integrity="sha256-1W26cRY7FxYvgU3HgH3TAG/bH1igtQivT5cTgkWSq2k="></script><meta property="og:url" content="https://qikang451.cn/ansible-modules/"><meta property="og:site_name" content="西康的博客"><meta property="og:title" content="ansible - modules"><meta property="og:description" content="Ansible 常用模块实战:command、copy、debug、file、service、shell 等模块的用法与典型场景。"><meta property="og:locale" content="zh_CN"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2018-08-07T00:00:00+00:00"><meta property="article:modified_time" content="2018-08-07T00:00:00+00:00"><meta property="article:tag" content="Ansible"><meta property="article:tag" content="DevOps"><meta property="og:image" content="https://qikang451.cn/img/og-cover.png"><meta property="og:see_also" content="https://qikang451.cn/ansible-base/"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://qikang451.cn/img/og-cover.png"><meta name=twitter:title content="ansible - modules"><meta name=twitter:description content="Ansible 常用模块实战:command、copy、debug、file、service、shell 等模块的用法与典型场景。"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"文章","item":"https://qikang451.cn/posts/"},{"@type":"ListItem","position":2,"name":"ansible - modules","item":"https://qikang451.cn/ansible-modules/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"ansible - modules","name":"ansible - modules","description":"Ansible 常用模块实战:command、copy、debug、file、service、shell 等模块的用法与典型场景。","keywords":["ansible","DevOps"],"articleBody":"Ansible - Modules 目录 Ansible - Modules 目录 常用模块总览 command copy debug file 创建权限和设置软连接 使用变量 创建文件和文件夹 service shell template user yum async 常用模块总览 调试和测试类的模块 ping 测试远程主机连通性 debug 调试模块,打印一些简单的消息 文件类的模块 copy 从本地复制文件到远程节点 template 从本地复制文件到远程节点,并进行变量的替换。 file 设置文件属性 Linux 上的常用操作 user: 管理用户账户 yum: 安装软件包 service: 管理服务 firewalld 管理防火墙 执行 shell 命令 shell: 在节点上执行 shell 命令,支持 $HOME、\"\u003c\"、\"\u003e\"、\"|\"、\";\" 和 \"\u0026\" command: 在远程节点上面执行命令,不支持 $HOME、\"\u003c\"、\"\u003e\"、\"|\"、\";\" 和 \"\u0026\" command --- - hosts: bj-web tasks: - name: return motd to registered var command: '/bin/date' register: test_var - name: print test_var debug: var: test_var copy --- - hosts: bj-web tasks: - name: test copy file copy: src: /tmp/leslie dest: /home/leslie/qikang owner: leslie group: leslie mode: 0700 如果只是复制文件 copy 就可以了,如果需要修改需要文件的内容,需要使用 template 模块。\ndebug debug 模块。\n打印动态注入的环境变量。\n- name: Print debug infomation eg hosts: bj-db tasks: - name: Command run line shell: uptime register: result - name: Show debug info debug: var=result.stdout verbosity=0 file 参考文档: https://docs.ansible.com/ansible/2.5/modules/file_module.html#file-module\n设置远程主机上的文件、软连接和文件夹权限,也可以创建和删除它们。\n创建权限和设置软连接 --- - hosts: bj-web tasks: - name: test file module file: src: /home/leslie/qikang dest: /home/leslie/qikang-link owner: leslie group: leslie mode: 0607 state: link 使用变量 --- - hosts: bj-web vars: test_var: \"__leslie__\" tasks: - name: test file module file: src: /home/leslie/qikang dest: /home/leslie/qika{{ test_var }}nk owner: leslie group: leslie mode: 0607 state: link 创建文件和文件夹 --- - hosts: bj-web vars: test_var: \"__leslie__\" tasks: - name: test file module file: src: /home/leslie/qikang dest: /home/leslie/qika{{ test_var }}nk owner: leslie group: leslie mode: 0607 state: link - name: create new file file: path: /tmp/foo.conf state: touch mode: 'u=rwx,g=r,o=r' - name: create new directory file: path: /tmp/foo_dir state: directory mode: 0755 service --- - hosts: sg-entry vars: http_port: 8000 max_clients: 3 remote_user: leslie tasks: - name: ensure httpd is started. service: httpd state: restarted shell --- - hosts: sg-entry remote_user: leslie tasks: - name: test shell command. shell: pwd \u003e /tmp/leslie \u0026\u0026 id \u003e\u003e /tmp/leslie template --- - hosts: bj-web vars: http_name: 'test_name' tasks: - name: test template module template: src: /tmp/leslie dest: /home/leslie/qikang owner: leslie group: leslie mode: 0700 backup: yes validate: 'cat %s' 在 /tmp/leslie 文件中直接使用 {{ ansible_default_ipv4.address }} {{ http_name }} {{ ansible_hostname }} 变量。\nuser --- - hosts: bj-web tasks: - name: test user modules user: name: johnd comment: 'John Doe' append: yes groups: johnd,ec2-user uid: 10400 - user: name: jsmith generate_ssh_key: yes ssh_key_bits: 2048 ssh_key_file: .ssh/jsmith_key yum --- - hosts: sg-entry vars: http_port: 8000 max_clients: 3 remote_user: leslie tasks: - name: 'install @Development tools' yum: name: \"@Development tools\" state: persent async ","wordCount":"782","inLanguage":"zh","image":"https://qikang451.cn/img/og-cover.png","datePublished":"2018-08-07T00:00:00Z","dateModified":"2018-08-07T00:00:00Z","author":{"@type":"Person","name":"西康"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://qikang451.cn/ansible-modules/"},"publisher":{"@type":"Organization","name":"西康的博客","logo":{"@type":"ImageObject","url":"https://qikang451.cn/img/p.jpg"}}}</script></head><body id=top><header class=header><nav class=header-nav><div class=logo><a href=https://qikang451.cn/ accesskey=h title="西康的博客 (Alt + H)"><img src=https://qikang451.cn/img/p_hu_eb73b01b4b448aac.jpg alt height=35>西康的博客</a><div class=logo-switches><button id=theme-toggle class=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
+<svg class="moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+<svg class="sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu class=menu><li><a href=https://qikang451.cn/search title="搜索 (Alt + /)" accesskey=/><span>搜索</span></a></li><li><a href=https://qikang451.cn/posts/ title=文章><span>文章</span></a></li><li><a href=https://qikang451.cn/series/ title=系列><span>系列</span></a></li><li><a href=https://qikang451.cn/archives/ title=归档><span>归档</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><nav class=breadcrumbs role=navigation aria-label=Breadcrumb><a href=/>主页</a>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"/></svg>
+<a href=/posts/>文章</a>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"/></svg></nav><h1 class="post-title entry-hint-parent">ansible - modules</h1><div class=post-meta><span title=2018-08-07T00:00:00+00:00>2018年8月7日</span>&nbsp;·&nbsp;<span>2 分钟</span>&nbsp;·&nbsp;<span>782 字</span>&nbsp;·&nbsp;<span>西康</span></div></header><details class=toc open><summary accesskey=c title="(Alt + C)"><span class=title>目录</span></summary><div class=inner><nav id=TableOfContents><ul><li><a href=#目录>目录</a></li><li><a href=#常用模块总览>常用模块总览</a></li><li><a href=#command>command</a></li><li><a href=#copy>copy</a></li><li><a href=#debug>debug</a></li><li><a href=#file>file</a><ul><li><a href=#创建权限和设置软连接>创建权限和设置软连接</a></li><li><a href=#使用变量>使用变量</a></li><li><a href=#创建文件和文件夹>创建文件和文件夹</a></li></ul></li><li><a href=#service>service</a></li><li><a href=#shell>shell</a></li><li><a href=#template>template</a></li><li><a href=#user>user</a></li><li><a href=#yum>yum</a></li><li><a href=#async>async</a></li></ul></nav></div></details><div class="post-content md-content"><h1 id=ansible---modules>Ansible - Modules<a hidden class=anchor aria-hidden=true href=#ansible---modules>#</a></h1><h2 id=目录>目录<a hidden class=anchor aria-hidden=true href=#目录>#</a></h2><ul><li><a href=/ansible-modules/#ansible---modules>Ansible - Modules</a><ul><li><a href=/ansible-modules/#%e7%9b%ae%e5%bd%95>目录</a></li><li><a href=/ansible-modules/#%e5%b8%b8%e7%94%a8%e6%a8%a1%e5%9d%97%e6%80%bb%e8%a7%88>常用模块总览</a></li><li><a href=/ansible-modules/#command>command</a></li><li><a href=/ansible-modules/#copy>copy</a></li><li><a href=/ansible-modules/#debug>debug</a></li><li><a href=/ansible-modules/#file>file</a><ul><li><a href=/ansible-modules/#%e5%88%9b%e5%bb%ba%e6%9d%83%e9%99%90%e5%92%8c%e8%ae%be%e7%bd%ae%e8%bd%af%e8%bf%9e%e6%8e%a5>创建权限和设置软连接</a></li><li><a href=/ansible-modules/#%e4%bd%bf%e7%94%a8%e5%8f%98%e9%87%8f>使用变量</a></li><li><a href=/ansible-modules/#%e5%88%9b%e5%bb%ba%e6%96%87%e4%bb%b6%e5%92%8c%e6%96%87%e4%bb%b6%e5%a4%b9>创建文件和文件夹</a></li></ul></li><li><a href=/ansible-modules/#service>service</a></li><li><a href=/ansible-modules/#shell>shell</a></li><li><a href=/ansible-modules/#template>template</a></li><li><a href=/ansible-modules/#user>user</a></li><li><a href=/ansible-modules/#yum>yum</a></li><li><a href=/ansible-modules/#async>async</a></li></ul></li></ul><hr><h2 id=常用模块总览>常用模块总览<a hidden class=anchor aria-hidden=true href=#常用模块总览>#</a></h2><ul><li>调试和测试类的模块<ul><li>ping 测试远程主机连通性</li><li>debug 调试模块,打印一些简单的消息</li></ul></li><li>文件类的模块<ul><li>copy 从本地复制文件到远程节点</li><li>template 从本地复制文件到远程节点,并进行变量的替换。</li><li>file 设置文件属性</li></ul></li><li>Linux 上的常用操作<ul><li>user: 管理用户账户</li><li>yum: 安装软件包</li><li>service: 管理服务</li><li>firewalld 管理防火墙</li></ul></li><li>执行 shell 命令<ul><li>shell: 在节点上执行 shell 命令,支持 <code>$HOME</code>、<code>"&lt;"</code>、<code>">"</code>、<code>"|"</code>、<code>";"</code> 和 <code>"&"</code></li><li>command: 在远程节点上面执行命令,不支持 <code>$HOME</code>、<code>"&lt;"</code>、<code>">"</code>、<code>"|"</code>、<code>";"</code> 和 <code>"&"</code></li></ul></li></ul><hr><h2 id=command>command<a hidden class=anchor aria-hidden=true href=#command>#</a></h2><pre><code class=language-yaml>---
+- hosts: bj-web
+
+  tasks:
+    - name: return motd to registered var
+      command: '/bin/date'
+      register: test_var
+
+    - name: print test_var
+      debug:
+        var: test_var
+</code></pre><hr><h2 id=copy>copy<a hidden class=anchor aria-hidden=true href=#copy>#</a></h2><pre><code class=language-yaml>---
+- hosts: bj-web
+
+  tasks:
+    - name: test copy file
+      copy:
+        src: /tmp/leslie
+        dest: /home/leslie/qikang
+        owner: leslie
+        group: leslie
+        mode: 0700
+</code></pre><p>如果只是复制文件 copy 就可以了,如果需要修改需要文件的内容,需要使用 template 模块。</p><hr><h2 id=debug>debug<a hidden class=anchor aria-hidden=true href=#debug>#</a></h2><p>debug 模块。</p><p>打印动态注入的环境变量。</p><pre><code class=language-yaml>- name: Print debug infomation eg
+  hosts: bj-db
+
+  tasks:
+    - name: Command run line
+      shell: uptime
+      register: result
+
+    - name: Show debug info
+      debug: var=result.stdout verbosity=0
+</code></pre><hr><h2 id=file>file<a hidden class=anchor aria-hidden=true href=#file>#</a></h2><p>参考文档: <a href=https://docs.ansible.com/ansible/2.5/modules/file_module.html#file-module>https://docs.ansible.com/ansible/2.5/modules/file_module.html#file-module</a></p><p>设置远程主机上的文件、软连接和文件夹权限,也可以创建和删除它们。</p><h3 id=创建权限和设置软连接>创建权限和设置软连接<a hidden class=anchor aria-hidden=true href=#创建权限和设置软连接>#</a></h3><pre><code class=language-yaml>---
+- hosts: bj-web
+
+  tasks:
+    - name: test file module
+      file:
+        src: /home/leslie/qikang
+        dest: /home/leslie/qikang-link
+        owner: leslie
+        group: leslie
+        mode: 0607
+        state: link
+</code></pre><h3 id=使用变量>使用变量<a hidden class=anchor aria-hidden=true href=#使用变量>#</a></h3><pre><code class=language-yaml>---
+- hosts: bj-web
+
+  vars:
+    test_var: &quot;__leslie__&quot;
+
+  tasks:
+    - name: test file module
+      file:
+        src: /home/leslie/qikang
+        dest: /home/leslie/qika{{ test_var }}nk
+        owner: leslie
+        group: leslie
+        mode: 0607
+        state: link
+</code></pre><h3 id=创建文件和文件夹>创建文件和文件夹<a hidden class=anchor aria-hidden=true href=#创建文件和文件夹>#</a></h3><pre><code class=language-yaml>---
+- hosts: bj-web
+
+  vars:
+    test_var: &quot;__leslie__&quot;
+
+  tasks:
+    - name: test file module
+      file:
+        src: /home/leslie/qikang
+        dest: /home/leslie/qika{{ test_var }}nk
+        owner: leslie
+        group: leslie
+        mode: 0607
+        state: link
+
+    - name: create new file
+      file:
+        path: /tmp/foo.conf
+        state: touch
+        mode: 'u=rwx,g=r,o=r'
+
+    - name: create new directory
+      file:
+        path: /tmp/foo_dir
+        state: directory
+        mode: 0755
+</code></pre><hr><h2 id=service>service<a hidden class=anchor aria-hidden=true href=#service>#</a></h2><pre><code class=language-yaml>---
+- hosts: sg-entry
+
+  vars:
+    http_port: 8000
+    max_clients: 3
+  remote_user: leslie
+
+  tasks:
+    - name: ensure httpd is started.
+      service: httpd
+      state: restarted
+</code></pre><hr><h2 id=shell>shell<a hidden class=anchor aria-hidden=true href=#shell>#</a></h2><pre><code class=language-yaml>---
+- hosts: sg-entry
+  remote_user: leslie
+
+  tasks:
+    - name: test shell command.
+      shell: pwd &gt; /tmp/leslie &amp;&amp; id &gt;&gt; /tmp/leslie
+</code></pre><hr><h2 id=template>template<a hidden class=anchor aria-hidden=true href=#template>#</a></h2><pre><code class=language-yaml>---
+- hosts: bj-web
+
+  vars:
+    http_name: 'test_name'
+
+  tasks:
+    - name: test template module
+      template:
+        src: /tmp/leslie
+        dest: /home/leslie/qikang
+        owner: leslie
+        group: leslie
+        mode: 0700
+        backup: yes
+      validate: 'cat %s'
+</code></pre><p>在 <code>/tmp/leslie</code> 文件中直接使用 <code>{{ ansible_default_ipv4.address }}</code> <code>{{ http_name }}</code> <code>{{ ansible_hostname }}</code> 变量。</p><hr><h2 id=user>user<a hidden class=anchor aria-hidden=true href=#user>#</a></h2><pre><code class=language-yaml>---
+- hosts: bj-web
+
+  tasks:
+    - name: test user modules
+      user:
+        name: johnd
+        comment: 'John Doe'
+        append: yes
+        groups: johnd,ec2-user
+        uid: 10400
+
+    - user:
+        name: jsmith
+        generate_ssh_key: yes
+        ssh_key_bits: 2048
+        ssh_key_file: .ssh/jsmith_key
+</code></pre><hr><h2 id=yum>yum<a hidden class=anchor aria-hidden=true href=#yum>#</a></h2><pre><code class=language-yaml>---
+- hosts: sg-entry
+
+  vars:
+    http_port: 8000
+    max_clients: 3
+  remote_user: leslie
+
+  tasks:
+    - name: 'install @Development tools'
+      yum:
+        name: &quot;@Development tools&quot;
+      state: persent
+</code></pre><h2 id=async>async<a hidden class=anchor aria-hidden=true href=#async>#</a></h2><p><img loading=lazy src=/img/ansible/async.png></p></div><aside class=recent-posts aria-label=最新文章><h2 class=recent-posts-title>最新文章</h2><ul class=recent-posts-list><li><a href=/kubernetes-install/ title="kubernetes 万能安装">kubernetes 万能安装</a>
+<time datetime=2026-10-09>2026-10-09</time></li><li><a href=/openeuler-24.03-install-docker/ title="openEuler 24.03 (LTS-SP2) 二进制安装docker">openEuler 24.03 (LTS-SP2) 二进制安装docker</a>
+<time datetime=2026-05-27>2026-05-27</time></li><li><a href=/containerd-registry/ title="containerd - registry">containerd - registry</a>
+<time datetime=2025-05-19>2025-05-19</time></li><li><a href=/docker-buildx-multiarch/ title="docker buildx 多架构镜像">docker buildx 多架构镜像</a>
+<time datetime=2025-05-19>2025-05-19</time></li><li><a href=/skopeo-tools/ title="skopeo 下载镜像工具">skopeo 下载镜像工具</a>
+<time datetime=2023-06-01>2023-06-01</time></li><li><a href=/about-me/ title=关于我>关于我</a>
+<time datetime=2022-11-20>2022-11-20</time></li><li><a href=/mysql-upgrade/ title="MySQL 二进制 5.7.30 升级到 5.7.35">MySQL 二进制 5.7.30 升级到 5.7.35</a>
+<time datetime=2022-01-19>2022-01-19</time></li><li><a href=/containerd-crictl/ title="containerd - crictl">containerd - crictl</a>
+<time datetime=2021-08-05>2021-08-05</time></li><li><a href=/containerd-ctr/ title="containerd - ctr">containerd - ctr</a>
+<time datetime=2021-08-05>2021-08-05</time></li><li><a href=/docker-cli-crictl/ title="docker cli vs crictl">docker cli vs crictl</a>
+<time datetime=2021-08-05>2021-08-05</time></li></ul><a class=recent-posts-more href=/archives/>查看全部 →</a></aside><footer class=post-footer><ul class=post-tags><li><a href=https://qikang451.cn/tags/ansible/>Ansible</a></li><li><a href=https://qikang451.cn/tags/devops/>DevOps</a></li></ul><nav class=paginav><a class=prev href=https://qikang451.cn/kubernetes-install-1.14.9/><span class=title>« 上一页</span>
+<span>kubernetes kubeadm 安装 1.14.9</span>
+</a><a class=next href=https://qikang451.cn/ansible-base/><span class=title>下一页 »</span>
+<span>ansible 基础汇总</span></a></nav></footer></article></main><footer class=footer><span>&copy; 2019-2026 <a href=https://qikang451.cn/>西康的博客</a></span></footer><a href=#top id=top-link class="top-link hidden" aria-label="go to top" title="Go to Top (Alt + G)" accesskey=g><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevrons-up"><polyline points="17 11 12 6 7 11"/><polyline points="17 18 12 13 7 18"/></svg></a><div class=progress-bar id=progress-bar aria-hidden=true></div><script>(function(){var e,n=document.getElementById("progress-bar");if(!n)return;e=!1;function t(){var s=document.documentElement,t=s.scrollHeight-window.innerHeight,o=t>0?window.scrollY/t*100:0;n.style.width=Math.min(100,Math.max(0,o))+"%",e=!1}window.addEventListener("scroll",function(){e||(e=!0,window.requestAnimationFrame(t))},{passive:!0}),window.addEventListener("resize",t),t()})()</script><script>(function(){var e,t,n,s,o,a=document.getElementById("TableOfContents");if(!a)return;if(o=Array.prototype.slice.call(a.querySelectorAll('a[href^="#"]')),!o.length)return;if(n={},o.forEach(function(e){var t=(e.getAttribute("href")||"").slice(1);try{t=decodeURIComponent(t)}catch{}n[t]=e}),e=Array.prototype.slice.call(document.querySelectorAll(".post-content h1[id], .post-content h2[id], .post-content h3[id],.post-content h4[id], .post-content h5[id], .post-content h6[id]")).filter(function(e){return n[e.id]}),!e.length)return;t=null;function r(e){if(e===t)return;t&&t.classList.remove("active"),e&&e.classList.add("active"),t=e}function i(){for(var o,i=window.scrollY+window.innerHeight/2,t=null,s=0;s<e.length;s++)if(o=e[s].getBoundingClientRect().top+window.scrollY,o<=i)t=e[s];else break;window.innerHeight+window.scrollY>=document.documentElement.scrollHeight-2&&(t=e[e.length-1]),t||(t=e[0]),r(t?n[t.id]:null)}s=!1,window.addEventListener("scroll",function(){s||(s=!0,window.requestAnimationFrame(function(){i(),s=!1}))},{passive:!0}),window.addEventListener("resize",i),i()})()</script><script>(function(){var e,n=Array.prototype.slice.call(document.querySelectorAll(".post-content img"));if(!n.length)return;e=null;function t(){if(!e)return;e.remove(),e=null,document.body.style.overflow=""}n.forEach(function(n){if(n.closest("a"))return;n.style.cursor="zoom-in",n.addEventListener("click",function(){if(e)return;e=document.createElement("div"),e.className="img-lightbox";var s,o=document.createElement("img");o.src=n.currentSrc||n.src,o.alt=n.alt||"",e.appendChild(o),s=document.createElement("button"),s.className="img-lightbox-close",s.type="button",s.setAttribute("aria-label","关闭"),s.textContent="×",s.addEventListener("click",function(e){e.stopPropagation(),t()}),e.appendChild(s),e.addEventListener("click",t),document.body.appendChild(e),document.body.style.overflow="hidden"})}),document.addEventListener("keydown",function(e){e.key==="Escape"&&t()})})()</script><script>let menu=document.getElementById("menu");if(menu){const e=localStorage.getItem("menu-scroll-position");e&&(menu.scrollLeft=parseInt(e,10));let t;menu.addEventListener("scroll",function(){clearTimeout(t),t=setTimeout(function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)},150)},{passive:!0})}document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);const n=document.querySelector(`[id='${decodeURIComponent(t)}']`);window.matchMedia("(prefers-reduced-motion: reduce)").matches?n.scrollIntoView():n.scrollIntoView({behavior:"smooth"}),n.focus({preventScroll:!0}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var toplink=document.getElementById("top-link"),scrollTicking=!1;window.addEventListener("scroll",function(){if(scrollTicking)return;scrollTicking=!0,requestAnimationFrame(function(){const e=window.innerHeight,t=document.body.scrollTop>e||document.documentElement.scrollTop>e;toplink.classList.toggle("hidden",!t),scrollTicking=!1})},{passive:!0})</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{const e=document.querySelector("html");e.dataset.theme==="dark"?(e.dataset.theme="light",localStorage.setItem("pref-theme","light")):(e.dataset.theme="dark",localStorage.setItem("pref-theme","dark"))})</script></body></html>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on 西康的博客</title>
+    <link>https://qikang451.cn/tags/</link>
+    <description>Recent content in Tags on 西康的博客</description>
+    <image>
+      <title>西康的博客</title>
+      <url>https://qikang451.cn/img/og-cover.png</url>
+      <link>https://qikang451.cn/img/og-cover.png</link>
+    </image>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 09 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://qikang451.cn/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kubernetes</title>
+      <link>https://qikang451.cn/tags/kubernetes/</link>
+      <pubDate>Fri, 09 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>https://qikang451.cn/tags/kubernetes/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Openeuler</title>
+      <link>https://qikang451.cn/tags/openeuler/</link>
+      <pubDate>Wed, 27 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://qikang451.cn/tags/openeuler/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Containerd</title>
+      <link>https://qikang451.cn/tags/containerd/</link>
+      <pubDate>Mon, 19 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://qikang451.cn/tags/containerd/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Docker</title>
+      <link>https://qikang451.cn/tags/docker/</link>
+      <pubDate>Mon, 19 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://qikang451.cn/tags/docker/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Skopeo</title>
+      <link>https://qikang451.cn/tags/skopeo/</link>
+      <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://qikang451.cn/tags/skopeo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MySQL</title>
+      <link>https://qikang451.cn/tags/mysql/</link>
+      <pubDate>Wed, 19 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>https://qikang451.cn/tags/mysql/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Harbor</title>
+      <link>https://qikang451.cn/tags/harbor/</link>
+      <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>https://qikang451.cn/tags/harbor/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gitlab</title>
+      <link>https://qikang451.cn/tags/gitlab/</link>
+      <pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>https://qikang451.cn/tags/gitlab/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ansible</title>
+      <link>https://qikang451.cn/tags/ansible/</link>
+      <pubDate>Tue, 07 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>https://qikang451.cn/tags/ansible/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DevOps</title>
+      <link>https://qikang451.cn/tags/devops/</link>
+      <pubDate>Tue, 07 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>https://qikang451.cn/tags/devops/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

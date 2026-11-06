@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Kubernetes on 西康的博客</title>
+    <link>https://qikang451.cn/series/kubernetes/</link>
+    <description>Recent content in Kubernetes on 西康的博客</description>
+    <image>
+      <title>西康的博客</title>
+      <url>https://qikang451.cn/img/og-cover.png</url>
+      <link>https://qikang451.cn/img/og-cover.png</link>
+    </image>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 09 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://qikang451.cn/series/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>kubernetes 万能安装</title>
+      <link>https://qikang451.cn/kubernetes-install/</link>
+      <pubDate>Fri, 09 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>https://qikang451.cn/kubernetes-install/</guid>
+      <description>k8s万能安装</description>
+    </item>
+    <item>
+      <title>kubernetes kubeadm 安装 1.14.9</title>
+      <link>https://qikang451.cn/kubernetes-install-1.14.9/</link>
+      <pubDate>Thu, 06 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>https://qikang451.cn/kubernetes-install-1.14.9/</guid>
+      <description>kubeadm 部署 Kubernetes v1.14.9:镜像加速、yum 源、内核参数与集群初始化。</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>MySQL on 西康的博客</title>
+    <link>https://qikang451.cn/tags/mysql/</link>
+    <description>Recent content in MySQL on 西康的博客</description>
+    <image>
+      <title>西康的博客</title>
+      <url>https://qikang451.cn/img/og-cover.png</url>
+      <link>https://qikang451.cn/img/og-cover.png</link>
+    </image>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 19 Jan 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://qikang451.cn/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MySQL 二进制 5.7.30 升级到 5.7.35</title>
+      <link>https://qikang451.cn/mysql-upgrade/</link>
+      <pubDate>Wed, 19 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>https://qikang451.cn/mysql-upgrade/</guid>
+      <description>MySQL 5.7.30 二进制升级到 5.7.35:热备、停服、数据迁移与表文件升级。</description>
+    </item>
+    <item>
+      <title>MySQL mysqlbinlog</title>
+      <link>https://qikang451.cn/mysqlbinlog/</link>
+      <pubDate>Wed, 29 Nov 2017 00:00:00 +0000</pubDate>
+      <guid>https://qikang451.cn/mysqlbinlog/</guid>
+      <description>MySQL binlog 查看与导出:show binary logs、mysqlbinlog 流式下载与按时间点解析。</description>
+    </item>
+    <item>
+      <title>MySQL mysqldump</title>
+      <link>https://qikang451.cn/mysqldump/</link>
+      <pubDate>Tue, 20 Dec 2016 00:00:00 +0000</pubDate>
+      <guid>https://qikang451.cn/mysqldump/</guid>
+      <description>mysqldump 逻辑备份与恢复:全库/单库/单表备份、压缩与还原命令。</description>
+    </item>
+    <item>
+      <title>MySQL 常用命令</title>
+      <link>https://qikang451.cn/mysql/</link>
+      <pubDate>Tue, 20 Dec 2016 00:00:00 +0000</pubDate>
+      <guid>https://qikang451.cn/mysql/</guid>
+      <description>MySQL 常用命令与 my.cnf 加载顺序、客户端连接与状态观测。</description>
+    </item>
+    <item>
+      <title>MySQL 用户管理</title>
+      <link>https://qikang451.cn/mysql-user/</link>
+      <pubDate>Tue, 20 Dec 2016 00:00:00 +0000</pubDate>
+      <guid>https://qikang451.cn/mysql-user/</guid>
+      <description>MySQL 用户与权限管理:创建用户、修改密码、授权查看与表结构变更。</description>
+    </item>
+  </channel>
+</rss>

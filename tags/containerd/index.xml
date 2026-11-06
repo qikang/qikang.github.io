@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Containerd on 西康的博客</title>
+    <link>https://qikang451.cn/tags/containerd/</link>
+    <description>Recent content in Containerd on 西康的博客</description>
+    <image>
+      <title>西康的博客</title>
+      <url>https://qikang451.cn/img/og-cover.png</url>
+      <link>https://qikang451.cn/img/og-cover.png</link>
+    </image>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 19 May 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://qikang451.cn/tags/containerd/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>containerd - registry</title>
+      <link>https://qikang451.cn/containerd-registry/</link>
+      <pubDate>Mon, 19 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://qikang451.cn/containerd-registry/</guid>
+      <description>containerd 接入自建 Registry:配置自签 CA 信任、hosts 解析与镜像拉取认证。</description>
+    </item>
+    <item>
+      <title>containerd - crictl</title>
+      <link>https://qikang451.cn/containerd-crictl/</link>
+      <pubDate>Thu, 05 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>https://qikang451.cn/containerd-crictl/</guid>
+      <description>containerd 配套工具 crictl 使用笔记:镜像管理、Pod 与容器调试、日志与统计查询。</description>
+    </item>
+    <item>
+      <title>containerd - ctr</title>
+      <link>https://qikang451.cn/containerd-ctr/</link>
+      <pubDate>Thu, 05 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>https://qikang451.cn/containerd-ctr/</guid>
+      <description>containerd 配套工具 ctr 使用笔记:命名空间管理、镜像导入导出、容器与任务操作。</description>
+    </item>
+    <item>
+      <title>docker cli vs crictl</title>
+      <link>https://qikang451.cn/docker-cli-crictl/</link>
+      <pubDate>Thu, 05 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>https://qikang451.cn/docker-cli-crictl/</guid>
+      <description>docker CLI、ctr、crictl 三方命令映射对照,含各自不支持的功能说明。</description>
+    </item>
+    <item>
+      <title>containerd - install</title>
+      <link>https://qikang451.cn/containerd-install/</link>
+      <pubDate>Wed, 04 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>https://qikang451.cn/containerd-install/</guid>
+      <description>containerd 二进制安装部署:解压到系统目录、生成默认配置、systemd 服务管理与开机自启。</description>
+    </item>
+  </channel>
+</rss>
