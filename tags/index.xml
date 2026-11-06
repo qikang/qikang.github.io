@@ -2,85 +2,85 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on 西康的博客</title>
-    <link>https://qikang451.cn/tags/</link>
+    <link>https://qikang.github.io/tags/</link>
     <description>Recent content in Tags on 西康的博客</description>
     <image>
       <title>西康的博客</title>
-      <url>https://qikang451.cn/img/og-cover.png</url>
-      <link>https://qikang451.cn/img/og-cover.png</link>
+      <url>https://qikang.github.io/img/og-cover.png</url>
+      <link>https://qikang.github.io/img/og-cover.png</link>
     </image>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <lastBuildDate>Fri, 09 Oct 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://qikang451.cn/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://qikang.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Kubernetes</title>
-      <link>https://qikang451.cn/tags/kubernetes/</link>
+      <link>https://qikang.github.io/tags/kubernetes/</link>
       <pubDate>Fri, 09 Oct 2026 00:00:00 +0000</pubDate>
-      <guid>https://qikang451.cn/tags/kubernetes/</guid>
+      <guid>https://qikang.github.io/tags/kubernetes/</guid>
       <description></description>
     </item>
     <item>
       <title>Openeuler</title>
-      <link>https://qikang451.cn/tags/openeuler/</link>
+      <link>https://qikang.github.io/tags/openeuler/</link>
       <pubDate>Wed, 27 May 2026 00:00:00 +0000</pubDate>
-      <guid>https://qikang451.cn/tags/openeuler/</guid>
+      <guid>https://qikang.github.io/tags/openeuler/</guid>
       <description></description>
     </item>
     <item>
       <title>Containerd</title>
-      <link>https://qikang451.cn/tags/containerd/</link>
+      <link>https://qikang.github.io/tags/containerd/</link>
       <pubDate>Mon, 19 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://qikang451.cn/tags/containerd/</guid>
+      <guid>https://qikang.github.io/tags/containerd/</guid>
       <description></description>
     </item>
     <item>
       <title>Docker</title>
-      <link>https://qikang451.cn/tags/docker/</link>
+      <link>https://qikang.github.io/tags/docker/</link>
       <pubDate>Mon, 19 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://qikang451.cn/tags/docker/</guid>
+      <guid>https://qikang.github.io/tags/docker/</guid>
       <description></description>
     </item>
     <item>
       <title>Skopeo</title>
-      <link>https://qikang451.cn/tags/skopeo/</link>
+      <link>https://qikang.github.io/tags/skopeo/</link>
       <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>https://qikang451.cn/tags/skopeo/</guid>
+      <guid>https://qikang.github.io/tags/skopeo/</guid>
       <description></description>
     </item>
     <item>
       <title>MySQL</title>
-      <link>https://qikang451.cn/tags/mysql/</link>
+      <link>https://qikang.github.io/tags/mysql/</link>
       <pubDate>Wed, 19 Jan 2022 00:00:00 +0000</pubDate>
-      <guid>https://qikang451.cn/tags/mysql/</guid>
+      <guid>https://qikang.github.io/tags/mysql/</guid>
       <description></description>
     </item>
     <item>
       <title>Harbor</title>
-      <link>https://qikang451.cn/tags/harbor/</link>
+      <link>https://qikang.github.io/tags/harbor/</link>
       <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>https://qikang451.cn/tags/harbor/</guid>
+      <guid>https://qikang.github.io/tags/harbor/</guid>
       <description></description>
     </item>
     <item>
       <title>Gitlab</title>
-      <link>https://qikang451.cn/tags/gitlab/</link>
+      <link>https://qikang.github.io/tags/gitlab/</link>
       <pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate>
-      <guid>https://qikang451.cn/tags/gitlab/</guid>
+      <guid>https://qikang.github.io/tags/gitlab/</guid>
       <description></description>
     </item>
     <item>
       <title>Ansible</title>
-      <link>https://qikang451.cn/tags/ansible/</link>
+      <link>https://qikang.github.io/tags/ansible/</link>
       <pubDate>Tue, 07 Aug 2018 00:00:00 +0000</pubDate>
-      <guid>https://qikang451.cn/tags/ansible/</guid>
+      <guid>https://qikang.github.io/tags/ansible/</guid>
       <description></description>
     </item>
     <item>
       <title>DevOps</title>
-      <link>https://qikang451.cn/tags/devops/</link>
+      <link>https://qikang.github.io/tags/devops/</link>
       <pubDate>Tue, 07 Aug 2018 00:00:00 +0000</pubDate>
-      <guid>https://qikang451.cn/tags/devops/</guid>
+      <guid>https://qikang.github.io/tags/devops/</guid>
       <description></description>
     </item>
   </channel>

@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Openeuler on 西康的博客</title>
-    <link>https://qikang451.cn/tags/openeuler/</link>
+    <link>https://qikang.github.io/tags/openeuler/</link>
     <description>Recent content in Openeuler on 西康的博客</description>
     <image>
       <title>西康的博客</title>
-      <url>https://qikang451.cn/img/og-cover.png</url>
-      <link>https://qikang451.cn/img/og-cover.png</link>
+      <url>https://qikang.github.io/img/og-cover.png</url>
+      <link>https://qikang.github.io/img/og-cover.png</link>
     </image>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <lastBuildDate>Wed, 27 May 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://qikang451.cn/tags/openeuler/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://qikang.github.io/tags/openeuler/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>openEuler 24.03 (LTS-SP2) 二进制安装docker</title>
-      <link>https://qikang451.cn/openeuler-24.03-install-docker/</link>
+      <link>https://qikang.github.io/openeuler-24.03-install-docker/</link>
       <pubDate>Wed, 27 May 2026 00:00:00 +0000</pubDate>
-      <guid>https://qikang451.cn/openeuler-24.03-install-docker/</guid>
+      <guid>https://qikang.github.io/openeuler-24.03-install-docker/</guid>
       <description>openEuler 24.03 LTS-SP2 上二进制安装 Docker 28.5.2、buildx 插件与 systemd 配置。</description>
     </item>
   </channel>

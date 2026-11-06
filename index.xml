@@ -2,197 +2,197 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>西康的博客</title>
-    <link>https://qikang451.cn/</link>
+    <link>https://qikang.github.io/</link>
     <description>Recent content on 西康的博客</description>
     <image>
       <title>西康的博客</title>
-      <url>https://qikang451.cn/img/og-cover.png</url>
-      <link>https://qikang451.cn/img/og-cover.png</link>
+      <url>https://qikang.github.io/img/og-cover.png</url>
+      <link>https://qikang.github.io/img/og-cover.png</link>
     </image>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <lastBuildDate>Fri, 09 Oct 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://qikang451.cn/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://qikang.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>kubernetes 万能安装</title>
-      <link>https://qikang451.cn/kubernetes-install/</link>
+      <link>https://qikang.github.io/kubernetes-install/</link>
       <pubDate>Fri, 09 Oct 2026 00:00:00 +0000</pubDate>
-      <guid>https://qikang451.cn/kubernetes-install/</guid>
+      <guid>https://qikang.github.io/kubernetes-install/</guid>
       <description>k8s万能安装</description>
     </item>
     <item>
       <title>openEuler 24.03 (LTS-SP2) 二进制安装docker</title>
-      <link>https://qikang451.cn/openeuler-24.03-install-docker/</link>
+      <link>https://qikang.github.io/openeuler-24.03-install-docker/</link>
       <pubDate>Wed, 27 May 2026 00:00:00 +0000</pubDate>
-      <guid>https://qikang451.cn/openeuler-24.03-install-docker/</guid>
+      <guid>https://qikang.github.io/openeuler-24.03-install-docker/</guid>
       <description>openEuler 24.03 LTS-SP2 上二进制安装 Docker 28.5.2、buildx 插件与 systemd 配置。</description>
     </item>
     <item>
       <title>containerd - registry</title>
-      <link>https://qikang451.cn/containerd-registry/</link>
+      <link>https://qikang.github.io/containerd-registry/</link>
       <pubDate>Mon, 19 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://qikang451.cn/containerd-registry/</guid>
+      <guid>https://qikang.github.io/containerd-registry/</guid>
       <description>containerd 接入自建 Registry:配置自签 CA 信任、hosts 解析与镜像拉取认证。</description>
     </item>
     <item>
       <title>docker buildx 多架构镜像</title>
-      <link>https://qikang451.cn/docker-buildx-multiarch/</link>
+      <link>https://qikang.github.io/docker-buildx-multiarch/</link>
       <pubDate>Mon, 19 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://qikang451.cn/docker-buildx-multiarch/</guid>
+      <guid>https://qikang.github.io/docker-buildx-multiarch/</guid>
       <description>使用 buildx 交叉编译构建多架构镜像,并推送到私有镜像仓库。</description>
     </item>
     <item>
       <title>skopeo 下载镜像工具</title>
-      <link>https://qikang451.cn/skopeo-tools/</link>
+      <link>https://qikang.github.io/skopeo-tools/</link>
       <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>https://qikang451.cn/skopeo-tools/</guid>
+      <guid>https://qikang.github.io/skopeo-tools/</guid>
       <description>skopeo 镜像同步工具:跨仓库复制镜像、查看远程 manifest、多架构与离线镜像下载。</description>
     </item>
     <item>
       <title>关于我</title>
-      <link>https://qikang451.cn/about-me/</link>
+      <link>https://qikang.github.io/about-me/</link>
       <pubDate>Sun, 20 Nov 2022 09:03:20 -0800</pubDate>
-      <guid>https://qikang451.cn/about-me/</guid>
+      <guid>https://qikang.github.io/about-me/</guid>
       <description>关于作者西康:Kubernetes / DevOps 方向的技术栈与关注领域。</description>
     </item>
     <item>
       <title>MySQL 二进制 5.7.30 升级到 5.7.35</title>
-      <link>https://qikang451.cn/mysql-upgrade/</link>
+      <link>https://qikang.github.io/mysql-upgrade/</link>
       <pubDate>Wed, 19 Jan 2022 00:00:00 +0000</pubDate>
-      <guid>https://qikang451.cn/mysql-upgrade/</guid>
+      <guid>https://qikang.github.io/mysql-upgrade/</guid>
       <description>MySQL 5.7.30 二进制升级到 5.7.35:热备、停服、数据迁移与表文件升级。</description>
     </item>
     <item>
       <title>containerd - crictl</title>
-      <link>https://qikang451.cn/containerd-crictl/</link>
+      <link>https://qikang.github.io/containerd-crictl/</link>
       <pubDate>Thu, 05 Aug 2021 00:00:00 +0000</pubDate>
-      <guid>https://qikang451.cn/containerd-crictl/</guid>
+      <guid>https://qikang.github.io/containerd-crictl/</guid>
       <description>containerd 配套工具 crictl 使用笔记:镜像管理、Pod 与容器调试、日志与统计查询。</description>
     </item>
     <item>
       <title>containerd - ctr</title>
-      <link>https://qikang451.cn/containerd-ctr/</link>
+      <link>https://qikang.github.io/containerd-ctr/</link>
       <pubDate>Thu, 05 Aug 2021 00:00:00 +0000</pubDate>
-      <guid>https://qikang451.cn/containerd-ctr/</guid>
+      <guid>https://qikang.github.io/containerd-ctr/</guid>
       <description>containerd 配套工具 ctr 使用笔记:命名空间管理、镜像导入导出、容器与任务操作。</description>
     </item>
     <item>
       <title>docker cli vs crictl</title>
-      <link>https://qikang451.cn/docker-cli-crictl/</link>
+      <link>https://qikang.github.io/docker-cli-crictl/</link>
       <pubDate>Thu, 05 Aug 2021 00:00:00 +0000</pubDate>
-      <guid>https://qikang451.cn/docker-cli-crictl/</guid>
+      <guid>https://qikang.github.io/docker-cli-crictl/</guid>
       <description>docker CLI、ctr、crictl 三方命令映射对照,含各自不支持的功能说明。</description>
     </item>
     <item>
       <title>containerd - install</title>
-      <link>https://qikang451.cn/containerd-install/</link>
+      <link>https://qikang.github.io/containerd-install/</link>
       <pubDate>Wed, 04 Aug 2021 00:00:00 +0000</pubDate>
-      <guid>https://qikang451.cn/containerd-install/</guid>
+      <guid>https://qikang.github.io/containerd-install/</guid>
       <description>containerd 二进制安装部署:解压到系统目录、生成默认配置、systemd 服务管理与开机自启。</description>
     </item>
     <item>
       <title>harbor 安装</title>
-      <link>https://qikang451.cn/harbor-install/</link>
+      <link>https://qikang.github.io/harbor-install/</link>
       <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>https://qikang451.cn/harbor-install/</guid>
+      <guid>https://qikang.github.io/harbor-install/</guid>
       <description>Harbor 私有镜像仓库离线安装:证书生成、Docker 部署与 Harbor 初始化。</description>
     </item>
     <item>
       <title>Docker - Registry</title>
-      <link>https://qikang451.cn/docker-registry/</link>
+      <link>https://qikang.github.io/docker-registry/</link>
       <pubDate>Wed, 05 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>https://qikang451.cn/docker-registry/</guid>
+      <guid>https://qikang.github.io/docker-registry/</guid>
       <description>Docker Registry 私有仓库:API 调用、镜像与 tag 管理、systemd 方式部署。</description>
     </item>
     <item>
       <title>gitlab 双主模式高可用部署方案</title>
-      <link>https://qikang451.cn/gitlab-install/</link>
+      <link>https://qikang.github.io/gitlab-install/</link>
       <pubDate>Tue, 21 Jul 2020 00:00:00 +0000</pubDate>
-      <guid>https://qikang451.cn/gitlab-install/</guid>
+      <guid>https://qikang.github.io/gitlab-install/</guid>
       <description>GitLab 双主高可用部署方案:Praefect + NFS 共享存储 + Redis + PostgreSQL 集群。</description>
     </item>
     <item>
       <title>Docker - Dockerfile</title>
-      <link>https://qikang451.cn/dockerfile/</link>
+      <link>https://qikang.github.io/dockerfile/</link>
       <pubDate>Thu, 09 Apr 2020 00:00:00 +0000</pubDate>
-      <guid>https://qikang451.cn/dockerfile/</guid>
+      <guid>https://qikang.github.io/dockerfile/</guid>
       <description>Dockerfile 指令详解与镜像构建最佳实践。</description>
     </item>
     <item>
       <title>Docker - run</title>
-      <link>https://qikang451.cn/docker-run/</link>
+      <link>https://qikang.github.io/docker-run/</link>
       <pubDate>Thu, 09 Apr 2020 00:00:00 +0000</pubDate>
-      <guid>https://qikang451.cn/docker-run/</guid>
+      <guid>https://qikang.github.io/docker-run/</guid>
       <description>docker run 命令详解:entrypoint/cmd 覆盖、常用选项与容器生命周期操作。</description>
     </item>
     <item>
       <title>Docker - 安全漏洞</title>
-      <link>https://qikang451.cn/docker-security/</link>
+      <link>https://qikang.github.io/docker-security/</link>
       <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>https://qikang451.cn/docker-security/</guid>
+      <guid>https://qikang.github.io/docker-security/</guid>
       <description>Docker 镜像安全:Clair、Anchore、Dagda 漏洞扫描工具对比与 anchore-engine 实战。</description>
     </item>
     <item>
       <title>Docker - 原理</title>
-      <link>https://qikang451.cn/docker/</link>
+      <link>https://qikang.github.io/docker/</link>
       <pubDate>Sun, 30 Jun 2019 00:00:00 +0000</pubDate>
-      <guid>https://qikang451.cn/docker/</guid>
+      <guid>https://qikang.github.io/docker/</guid>
       <description>Docker 核心原理与实践:安装卸载、镜像容器管理、CGroup/NameSpace 隔离与网络存储。</description>
     </item>
     <item>
       <title>kubernetes kubeadm 安装 1.14.9</title>
-      <link>https://qikang451.cn/kubernetes-install-1.14.9/</link>
+      <link>https://qikang.github.io/kubernetes-install-1.14.9/</link>
       <pubDate>Thu, 06 Jun 2019 00:00:00 +0000</pubDate>
-      <guid>https://qikang451.cn/kubernetes-install-1.14.9/</guid>
+      <guid>https://qikang.github.io/kubernetes-install-1.14.9/</guid>
       <description>kubeadm 部署 Kubernetes v1.14.9:镜像加速、yum 源、内核参数与集群初始化。</description>
     </item>
     <item>
       <title>ansible - modules</title>
-      <link>https://qikang451.cn/ansible-modules/</link>
+      <link>https://qikang.github.io/ansible-modules/</link>
       <pubDate>Tue, 07 Aug 2018 00:00:00 +0000</pubDate>
-      <guid>https://qikang451.cn/ansible-modules/</guid>
+      <guid>https://qikang.github.io/ansible-modules/</guid>
       <description>Ansible 常用模块实战:command、copy、debug、file、service、shell 等模块的用法与典型场景。</description>
     </item>
     <item>
       <title>ansible 基础汇总</title>
-      <link>https://qikang451.cn/ansible-base/</link>
+      <link>https://qikang.github.io/ansible-base/</link>
       <pubDate>Tue, 07 Aug 2018 00:00:00 +0000</pubDate>
-      <guid>https://qikang451.cn/ansible-base/</guid>
+      <guid>https://qikang.github.io/ansible-base/</guid>
       <description>Ansible 基础:安装配置、ansible.cfg 加载顺序、inventory 清单文件、ad-hoc 命令、playbook 与 role 目录结构。</description>
     </item>
     <item>
       <title>MySQL mysqlbinlog</title>
-      <link>https://qikang451.cn/mysqlbinlog/</link>
+      <link>https://qikang.github.io/mysqlbinlog/</link>
       <pubDate>Wed, 29 Nov 2017 00:00:00 +0000</pubDate>
-      <guid>https://qikang451.cn/mysqlbinlog/</guid>
+      <guid>https://qikang.github.io/mysqlbinlog/</guid>
       <description>MySQL binlog 查看与导出:show binary logs、mysqlbinlog 流式下载与按时间点解析。</description>
     </item>
     <item>
       <title>docker - compose</title>
-      <link>https://qikang451.cn/docker-compose/</link>
+      <link>https://qikang.github.io/docker-compose/</link>
       <pubDate>Fri, 26 May 2017 00:00:00 +0000</pubDate>
-      <guid>https://qikang451.cn/docker-compose/</guid>
+      <guid>https://qikang.github.io/docker-compose/</guid>
       <description>docker compose 常用命令汇总:启动、停止、查看日志与批量清理容器。</description>
     </item>
     <item>
       <title>MySQL mysqldump</title>
-      <link>https://qikang451.cn/mysqldump/</link>
+      <link>https://qikang.github.io/mysqldump/</link>
       <pubDate>Tue, 20 Dec 2016 00:00:00 +0000</pubDate>
-      <guid>https://qikang451.cn/mysqldump/</guid>
+      <guid>https://qikang.github.io/mysqldump/</guid>
       <description>mysqldump 逻辑备份与恢复:全库/单库/单表备份、压缩与还原命令。</description>
     </item>
     <item>
       <title>MySQL 常用命令</title>
-      <link>https://qikang451.cn/mysql/</link>
+      <link>https://qikang.github.io/mysql/</link>
       <pubDate>Tue, 20 Dec 2016 00:00:00 +0000</pubDate>
-      <guid>https://qikang451.cn/mysql/</guid>
+      <guid>https://qikang.github.io/mysql/</guid>
       <description>MySQL 常用命令与 my.cnf 加载顺序、客户端连接与状态观测。</description>
     </item>
     <item>
       <title>MySQL 用户管理</title>
-      <link>https://qikang451.cn/mysql-user/</link>
+      <link>https://qikang.github.io/mysql-user/</link>
       <pubDate>Tue, 20 Dec 2016 00:00:00 +0000</pubDate>
-      <guid>https://qikang451.cn/mysql-user/</guid>
+      <guid>https://qikang.github.io/mysql-user/</guid>
       <description>MySQL 用户与权限管理:创建用户、修改密码、授权查看与表结构变更。</description>
     </item>
   </channel>

@@ -2,146 +2,146 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://qikang451.cn/series/kubernetes/</loc>
+    <loc>https://qikang.github.io/series/kubernetes/</loc>
     <lastmod>2026-10-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://qikang451.cn/tags/kubernetes/</loc>
+    <loc>https://qikang.github.io/tags/kubernetes/</loc>
     <lastmod>2026-10-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://qikang451.cn/kubernetes-install/</loc>
+    <loc>https://qikang.github.io/kubernetes-install/</loc>
     <lastmod>2026-10-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://qikang451.cn/tags/</loc>
+    <loc>https://qikang.github.io/tags/</loc>
     <lastmod>2026-10-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://qikang451.cn/posts/</loc>
+    <loc>https://qikang.github.io/posts/</loc>
     <lastmod>2026-10-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://qikang451.cn/series/</loc>
+    <loc>https://qikang.github.io/series/</loc>
     <lastmod>2026-10-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://qikang451.cn/</loc>
+    <loc>https://qikang.github.io/</loc>
     <lastmod>2026-10-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://qikang451.cn/series/docker/</loc>
+    <loc>https://qikang.github.io/series/docker/</loc>
     <lastmod>2026-05-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://qikang451.cn/tags/openeuler/</loc>
+    <loc>https://qikang.github.io/tags/openeuler/</loc>
     <lastmod>2026-05-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://qikang451.cn/openeuler-24.03-install-docker/</loc>
+    <loc>https://qikang.github.io/openeuler-24.03-install-docker/</loc>
     <lastmod>2026-05-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://qikang451.cn/series/containerd/</loc>
+    <loc>https://qikang.github.io/series/containerd/</loc>
     <lastmod>2025-05-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://qikang451.cn/tags/containerd/</loc>
+    <loc>https://qikang.github.io/tags/containerd/</loc>
     <lastmod>2025-05-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://qikang451.cn/containerd-registry/</loc>
+    <loc>https://qikang.github.io/containerd-registry/</loc>
     <lastmod>2025-05-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://qikang451.cn/tags/docker/</loc>
+    <loc>https://qikang.github.io/tags/docker/</loc>
     <lastmod>2025-05-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://qikang451.cn/docker-buildx-multiarch/</loc>
+    <loc>https://qikang.github.io/docker-buildx-multiarch/</loc>
     <lastmod>2025-05-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://qikang451.cn/tags/skopeo/</loc>
+    <loc>https://qikang.github.io/tags/skopeo/</loc>
     <lastmod>2023-06-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://qikang451.cn/skopeo-tools/</loc>
+    <loc>https://qikang.github.io/skopeo-tools/</loc>
     <lastmod>2023-06-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://qikang451.cn/about-me/</loc>
+    <loc>https://qikang.github.io/about-me/</loc>
     <lastmod>2022-11-20T09:03:20-08:00</lastmod>
   </url><url>
-    <loc>https://qikang451.cn/series/mysql/</loc>
+    <loc>https://qikang.github.io/series/mysql/</loc>
     <lastmod>2022-01-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://qikang451.cn/tags/mysql/</loc>
+    <loc>https://qikang.github.io/tags/mysql/</loc>
     <lastmod>2022-01-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://qikang451.cn/mysql-upgrade/</loc>
+    <loc>https://qikang.github.io/mysql-upgrade/</loc>
     <lastmod>2022-01-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://qikang451.cn/containerd-crictl/</loc>
+    <loc>https://qikang.github.io/containerd-crictl/</loc>
     <lastmod>2021-08-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://qikang451.cn/containerd-ctr/</loc>
+    <loc>https://qikang.github.io/containerd-ctr/</loc>
     <lastmod>2021-08-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://qikang451.cn/docker-cli-crictl/</loc>
+    <loc>https://qikang.github.io/docker-cli-crictl/</loc>
     <lastmod>2021-08-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://qikang451.cn/containerd-install/</loc>
+    <loc>https://qikang.github.io/containerd-install/</loc>
     <lastmod>2021-08-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://qikang451.cn/tags/harbor/</loc>
+    <loc>https://qikang.github.io/tags/harbor/</loc>
     <lastmod>2020-08-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://qikang451.cn/harbor-install/</loc>
+    <loc>https://qikang.github.io/harbor-install/</loc>
     <lastmod>2020-08-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://qikang451.cn/docker-registry/</loc>
+    <loc>https://qikang.github.io/docker-registry/</loc>
     <lastmod>2020-08-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://qikang451.cn/series/gitlab/</loc>
+    <loc>https://qikang.github.io/series/gitlab/</loc>
     <lastmod>2020-07-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://qikang451.cn/tags/gitlab/</loc>
+    <loc>https://qikang.github.io/tags/gitlab/</loc>
     <lastmod>2020-07-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://qikang451.cn/gitlab-install/</loc>
+    <loc>https://qikang.github.io/gitlab-install/</loc>
     <lastmod>2020-07-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://qikang451.cn/dockerfile/</loc>
+    <loc>https://qikang.github.io/dockerfile/</loc>
     <lastmod>2020-04-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://qikang451.cn/docker-run/</loc>
+    <loc>https://qikang.github.io/docker-run/</loc>
     <lastmod>2020-04-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://qikang451.cn/docker-security/</loc>
+    <loc>https://qikang.github.io/docker-security/</loc>
     <lastmod>2020-03-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://qikang451.cn/docker/</loc>
+    <loc>https://qikang.github.io/docker/</loc>
     <lastmod>2019-06-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://qikang451.cn/kubernetes-install-1.14.9/</loc>
+    <loc>https://qikang.github.io/kubernetes-install-1.14.9/</loc>
     <lastmod>2019-06-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://qikang451.cn/series/ansible/</loc>
+    <loc>https://qikang.github.io/series/ansible/</loc>
     <lastmod>2018-08-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://qikang451.cn/tags/ansible/</loc>
+    <loc>https://qikang.github.io/tags/ansible/</loc>
     <lastmod>2018-08-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://qikang451.cn/ansible-modules/</loc>
+    <loc>https://qikang.github.io/ansible-modules/</loc>
     <lastmod>2018-08-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://qikang451.cn/ansible-base/</loc>
+    <loc>https://qikang.github.io/ansible-base/</loc>
     <lastmod>2018-08-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://qikang451.cn/tags/devops/</loc>
+    <loc>https://qikang.github.io/tags/devops/</loc>
     <lastmod>2018-08-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://qikang451.cn/mysqlbinlog/</loc>
+    <loc>https://qikang.github.io/mysqlbinlog/</loc>
     <lastmod>2017-11-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://qikang451.cn/docker-compose/</loc>
+    <loc>https://qikang.github.io/docker-compose/</loc>
     <lastmod>2017-05-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://qikang451.cn/mysqldump/</loc>
+    <loc>https://qikang.github.io/mysqldump/</loc>
     <lastmod>2016-12-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://qikang451.cn/mysql/</loc>
+    <loc>https://qikang.github.io/mysql/</loc>
     <lastmod>2016-12-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://qikang451.cn/mysql-user/</loc>
+    <loc>https://qikang.github.io/mysql-user/</loc>
     <lastmod>2016-12-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://qikang451.cn/archives/</loc>
+    <loc>https://qikang.github.io/archives/</loc>
   </url><url>
-    <loc>https://qikang451.cn/search/</loc>
+    <loc>https://qikang.github.io/search/</loc>
   </url>
 </urlset>

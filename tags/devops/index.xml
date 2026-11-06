@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>DevOps on 西康的博客</title>
-    <link>https://qikang451.cn/tags/devops/</link>
+    <link>https://qikang.github.io/tags/devops/</link>
     <description>Recent content in DevOps on 西康的博客</description>
     <image>
       <title>西康的博客</title>
-      <url>https://qikang451.cn/img/og-cover.png</url>
-      <link>https://qikang451.cn/img/og-cover.png</link>
+      <url>https://qikang.github.io/img/og-cover.png</url>
+      <link>https://qikang.github.io/img/og-cover.png</link>
     </image>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <lastBuildDate>Tue, 07 Aug 2018 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://qikang451.cn/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://qikang.github.io/tags/devops/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ansible - modules</title>
-      <link>https://qikang451.cn/ansible-modules/</link>
+      <link>https://qikang.github.io/ansible-modules/</link>
       <pubDate>Tue, 07 Aug 2018 00:00:00 +0000</pubDate>
-      <guid>https://qikang451.cn/ansible-modules/</guid>
+      <guid>https://qikang.github.io/ansible-modules/</guid>
       <description>Ansible 常用模块实战:command、copy、debug、file、service、shell 等模块的用法与典型场景。</description>
     </item>
     <item>
       <title>ansible 基础汇总</title>
-      <link>https://qikang451.cn/ansible-base/</link>
+      <link>https://qikang.github.io/ansible-base/</link>
       <pubDate>Tue, 07 Aug 2018 00:00:00 +0000</pubDate>
-      <guid>https://qikang451.cn/ansible-base/</guid>
+      <guid>https://qikang.github.io/ansible-base/</guid>
       <description>Ansible 基础:安装配置、ansible.cfg 加载顺序、inventory 清单文件、ad-hoc 命令、playbook 与 role 目录结构。</description>
     </item>
   </channel>

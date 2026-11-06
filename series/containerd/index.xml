@@ -2,57 +2,57 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Containerd on 西康的博客</title>
-    <link>https://qikang451.cn/series/containerd/</link>
+    <link>https://qikang.github.io/series/containerd/</link>
     <description>Recent content in Containerd on 西康的博客</description>
     <image>
       <title>西康的博客</title>
-      <url>https://qikang451.cn/img/og-cover.png</url>
-      <link>https://qikang451.cn/img/og-cover.png</link>
+      <url>https://qikang.github.io/img/og-cover.png</url>
+      <link>https://qikang.github.io/img/og-cover.png</link>
     </image>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <lastBuildDate>Mon, 19 May 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://qikang451.cn/series/containerd/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://qikang.github.io/series/containerd/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>containerd - registry</title>
-      <link>https://qikang451.cn/containerd-registry/</link>
+      <link>https://qikang.github.io/containerd-registry/</link>
       <pubDate>Mon, 19 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://qikang451.cn/containerd-registry/</guid>
+      <guid>https://qikang.github.io/containerd-registry/</guid>
       <description>containerd 接入自建 Registry:配置自签 CA 信任、hosts 解析与镜像拉取认证。</description>
     </item>
     <item>
       <title>skopeo 下载镜像工具</title>
-      <link>https://qikang451.cn/skopeo-tools/</link>
+      <link>https://qikang.github.io/skopeo-tools/</link>
       <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>https://qikang451.cn/skopeo-tools/</guid>
+      <guid>https://qikang.github.io/skopeo-tools/</guid>
       <description>skopeo 镜像同步工具:跨仓库复制镜像、查看远程 manifest、多架构与离线镜像下载。</description>
     </item>
     <item>
       <title>containerd - crictl</title>
-      <link>https://qikang451.cn/containerd-crictl/</link>
+      <link>https://qikang.github.io/containerd-crictl/</link>
       <pubDate>Thu, 05 Aug 2021 00:00:00 +0000</pubDate>
-      <guid>https://qikang451.cn/containerd-crictl/</guid>
+      <guid>https://qikang.github.io/containerd-crictl/</guid>
       <description>containerd 配套工具 crictl 使用笔记:镜像管理、Pod 与容器调试、日志与统计查询。</description>
     </item>
     <item>
       <title>containerd - ctr</title>
-      <link>https://qikang451.cn/containerd-ctr/</link>
+      <link>https://qikang.github.io/containerd-ctr/</link>
       <pubDate>Thu, 05 Aug 2021 00:00:00 +0000</pubDate>
-      <guid>https://qikang451.cn/containerd-ctr/</guid>
+      <guid>https://qikang.github.io/containerd-ctr/</guid>
       <description>containerd 配套工具 ctr 使用笔记:命名空间管理、镜像导入导出、容器与任务操作。</description>
     </item>
     <item>
       <title>docker cli vs crictl</title>
-      <link>https://qikang451.cn/docker-cli-crictl/</link>
+      <link>https://qikang.github.io/docker-cli-crictl/</link>
       <pubDate>Thu, 05 Aug 2021 00:00:00 +0000</pubDate>
-      <guid>https://qikang451.cn/docker-cli-crictl/</guid>
+      <guid>https://qikang.github.io/docker-cli-crictl/</guid>
       <description>docker CLI、ctr、crictl 三方命令映射对照,含各自不支持的功能说明。</description>
     </item>
     <item>
       <title>containerd - install</title>
-      <link>https://qikang451.cn/containerd-install/</link>
+      <link>https://qikang.github.io/containerd-install/</link>
       <pubDate>Wed, 04 Aug 2021 00:00:00 +0000</pubDate>
-      <guid>https://qikang451.cn/containerd-install/</guid>
+      <guid>https://qikang.github.io/containerd-install/</guid>
       <description>containerd 二进制安装部署:解压到系统目录、生成默认配置、systemd 服务管理与开机自启。</description>
     </item>
   </channel>

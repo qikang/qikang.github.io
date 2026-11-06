@@ -1,3 +1,3 @@
 User-agent: *
 Disallow:
-Sitemap: https://qikang451.cn/sitemap.xml
+Sitemap: https://qikang.github.io/sitemap.xml

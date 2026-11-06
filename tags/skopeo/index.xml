@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Skopeo on 西康的博客</title>
-    <link>https://qikang451.cn/tags/skopeo/</link>
+    <link>https://qikang.github.io/tags/skopeo/</link>
     <description>Recent content in Skopeo on 西康的博客</description>
     <image>
       <title>西康的博客</title>
-      <url>https://qikang451.cn/img/og-cover.png</url>
-      <link>https://qikang451.cn/img/og-cover.png</link>
+      <url>https://qikang.github.io/img/og-cover.png</url>
+      <link>https://qikang.github.io/img/og-cover.png</link>
     </image>
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <lastBuildDate>Thu, 01 Jun 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://qikang451.cn/tags/skopeo/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://qikang.github.io/tags/skopeo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>skopeo 下载镜像工具</title>
-      <link>https://qikang451.cn/skopeo-tools/</link>
+      <link>https://qikang.github.io/skopeo-tools/</link>
       <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>https://qikang451.cn/skopeo-tools/</guid>
+      <guid>https://qikang.github.io/skopeo-tools/</guid>
       <description>skopeo 镜像同步工具:跨仓库复制镜像、查看远程 manifest、多架构与离线镜像下载。</description>
     </item>
   </channel>
