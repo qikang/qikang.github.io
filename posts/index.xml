@@ -28,7 +28,7 @@
       <description>openEuler 24.03 LTS-SP2 上二进制安装 Docker 28.5.2、buildx 插件与 systemd 配置。</description>
     </item>
     <item>
-      <title>containerd - registry</title>
+      <title>containerd - 使用自建registry</title>
       <link>https://qikang.github.io/containerd-registry/</link>
       <pubDate>Mon, 19 May 2025 00:00:00 +0000</pubDate>
       <guid>https://qikang.github.io/containerd-registry/</guid>
@@ -56,21 +56,21 @@
       <description>MySQL 5.7.30 二进制升级到 5.7.35:热备、停服、数据迁移与表文件升级。</description>
     </item>
     <item>
-      <title>containerd - crictl</title>
+      <title>containerd - crictl 常用命令</title>
       <link>https://qikang.github.io/containerd-crictl/</link>
       <pubDate>Thu, 05 Aug 2021 00:00:00 +0000</pubDate>
       <guid>https://qikang.github.io/containerd-crictl/</guid>
       <description>containerd 配套工具 crictl 使用笔记:镜像管理、Pod 与容器调试、日志与统计查询。</description>
     </item>
     <item>
-      <title>containerd - ctr</title>
+      <title>containerd - ctr 常用命令</title>
       <link>https://qikang.github.io/containerd-ctr/</link>
       <pubDate>Thu, 05 Aug 2021 00:00:00 +0000</pubDate>
       <guid>https://qikang.github.io/containerd-ctr/</guid>
       <description>containerd 配套工具 ctr 使用笔记:命名空间管理、镜像导入导出、容器与任务操作。</description>
     </item>
     <item>
-      <title>docker cli vs crictl</title>
+      <title>Docker cli vs crictl</title>
       <link>https://qikang.github.io/docker-cli-crictl/</link>
       <pubDate>Thu, 05 Aug 2021 00:00:00 +0000</pubDate>
       <guid>https://qikang.github.io/docker-cli-crictl/</guid>
@@ -91,7 +91,7 @@
       <description>Harbor 私有镜像仓库离线安装:证书生成、Docker 部署与 Harbor 初始化。</description>
     </item>
     <item>
-      <title>Docker - Registry</title>
+      <title>Docker - 自建Registry</title>
       <link>https://qikang.github.io/docker-registry/</link>
       <pubDate>Wed, 05 Aug 2020 00:00:00 +0000</pubDate>
       <guid>https://qikang.github.io/docker-registry/</guid>

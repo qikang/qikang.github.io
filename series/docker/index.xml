@@ -28,7 +28,7 @@
       <description>使用 buildx 交叉编译构建多架构镜像,并推送到私有镜像仓库。</description>
     </item>
     <item>
-      <title>docker cli vs crictl</title>
+      <title>Docker cli vs crictl</title>
       <link>https://qikang.github.io/docker-cli-crictl/</link>
       <pubDate>Thu, 05 Aug 2021 00:00:00 +0000</pubDate>
       <guid>https://qikang.github.io/docker-cli-crictl/</guid>
@@ -42,7 +42,7 @@
       <description>Harbor 私有镜像仓库离线安装:证书生成、Docker 部署与 Harbor 初始化。</description>
     </item>
     <item>
-      <title>Docker - Registry</title>
+      <title>Docker - 自建Registry</title>
       <link>https://qikang.github.io/docker-registry/</link>
       <pubDate>Wed, 05 Aug 2020 00:00:00 +0000</pubDate>
       <guid>https://qikang.github.io/docker-registry/</guid>

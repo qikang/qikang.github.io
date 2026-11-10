@@ -14,28 +14,35 @@
     <lastBuildDate>Mon, 19 May 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://qikang.github.io/tags/containerd/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>containerd - registry</title>
+      <title>containerd - 使用自建registry</title>
       <link>https://qikang.github.io/containerd-registry/</link>
       <pubDate>Mon, 19 May 2025 00:00:00 +0000</pubDate>
       <guid>https://qikang.github.io/containerd-registry/</guid>
       <description>containerd 接入自建 Registry:配置自签 CA 信任、hosts 解析与镜像拉取认证。</description>
     </item>
     <item>
-      <title>containerd - crictl</title>
+      <title>skopeo 下载镜像工具</title>
+      <link>https://qikang.github.io/skopeo-tools/</link>
+      <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://qikang.github.io/skopeo-tools/</guid>
+      <description>skopeo 镜像同步工具:跨仓库复制镜像、查看远程 manifest、多架构与离线镜像下载。</description>
+    </item>
+    <item>
+      <title>containerd - crictl 常用命令</title>
       <link>https://qikang.github.io/containerd-crictl/</link>
       <pubDate>Thu, 05 Aug 2021 00:00:00 +0000</pubDate>
       <guid>https://qikang.github.io/containerd-crictl/</guid>
       <description>containerd 配套工具 crictl 使用笔记:镜像管理、Pod 与容器调试、日志与统计查询。</description>
     </item>
     <item>
-      <title>containerd - ctr</title>
+      <title>containerd - ctr 常用命令</title>
       <link>https://qikang.github.io/containerd-ctr/</link>
       <pubDate>Thu, 05 Aug 2021 00:00:00 +0000</pubDate>
       <guid>https://qikang.github.io/containerd-ctr/</guid>
       <description>containerd 配套工具 ctr 使用笔记:命名空间管理、镜像导入导出、容器与任务操作。</description>
     </item>
     <item>
-      <title>docker cli vs crictl</title>
+      <title>Docker cli vs crictl</title>
       <link>https://qikang.github.io/docker-cli-crictl/</link>
       <pubDate>Thu, 05 Aug 2021 00:00:00 +0000</pubDate>
       <guid>https://qikang.github.io/docker-cli-crictl/</guid>
