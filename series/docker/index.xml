@@ -49,18 +49,18 @@
       <description>Docker Registry 私有仓库:API 调用、镜像与 tag 管理、systemd 方式部署。</description>
     </item>
     <item>
-      <title>Docker - Dockerfile</title>
-      <link>https://qikang.github.io/dockerfile/</link>
-      <pubDate>Thu, 09 Apr 2020 00:00:00 +0000</pubDate>
-      <guid>https://qikang.github.io/dockerfile/</guid>
-      <description>Dockerfile 指令详解与镜像构建最佳实践。</description>
-    </item>
-    <item>
       <title>Docker - run</title>
       <link>https://qikang.github.io/docker-run/</link>
       <pubDate>Thu, 09 Apr 2020 00:00:00 +0000</pubDate>
       <guid>https://qikang.github.io/docker-run/</guid>
       <description>docker run 命令详解:entrypoint/cmd 覆盖、常用选项与容器生命周期操作。</description>
+    </item>
+    <item>
+      <title>Dockerfile build image</title>
+      <link>https://qikang.github.io/dockerfile_build/</link>
+      <pubDate>Thu, 09 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>https://qikang.github.io/dockerfile_build/</guid>
+      <description>Dockerfile 指令详解与镜像构建最佳实践。</description>
     </item>
     <item>
       <title>Docker - 安全漏洞</title>

@@ -26,6 +26,9 @@
     <loc>https://qikang.github.io/series/docker/</loc>
     <lastmod>2026-05-27T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://qikang.github.io/tags/docker/</loc>
+    <lastmod>2026-05-27T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://qikang.github.io/tags/openeuler/</loc>
     <lastmod>2026-05-27T00:00:00+00:00</lastmod>
   </url><url>
@@ -39,9 +42,6 @@
     <lastmod>2025-05-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://qikang.github.io/containerd-registry/</loc>
-    <lastmod>2025-05-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://qikang.github.io/tags/docker/</loc>
     <lastmod>2025-05-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://qikang.github.io/docker-buildx-multiarch/</loc>
@@ -95,10 +95,10 @@
     <loc>https://qikang.github.io/gitlab-install/</loc>
     <lastmod>2020-07-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://qikang.github.io/dockerfile/</loc>
+    <loc>https://qikang.github.io/docker-run/</loc>
     <lastmod>2020-04-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://qikang.github.io/docker-run/</loc>
+    <loc>https://qikang.github.io/dockerfile_build/</loc>
     <lastmod>2020-04-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://qikang.github.io/docker-security/</loc>
