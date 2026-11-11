@@ -48,8 +48,8 @@ mysqlbinlog后跟空格加多个文件</p><pre><code class=language-bash>此处�
 </code></pre><ul><li>先导入完全备份</li></ul><pre><code class=language-bash># mysql &lt; /tmp/testdb4.sql
 </code></pre></li><li>还原了库，但此时没有新数据<ul><li>导入用mysqlbinlog导出的新数据</li></ul><pre><code class=language-bash># mysql &lt; /tmp/testdb5.inc.sql
 </code></pre>开启二进制日志，服务上线<pre><code class=language-bash>&gt; set session sql_log_bin=0;
-</code></pre></li></ul></li></ul></div><aside class=recent-posts aria-label=最新文章><h2 class=recent-posts-title>最新文章</h2><ul class=recent-posts-list><li><a href=/kubernetes-install/ title="kubernetes 万能安装">kubernetes 万能安装</a>
-<time datetime=2026-10-09>2026-10-09</time></li><li><a href=/openeuler-24.03-install-docker/ title="openEuler 24.03 (LTS-SP2) 二进制安装docker">openEuler 24.03 (LTS-SP2) 二进制安装docker</a>
+</code></pre></li></ul></li></ul></div><aside class=recent-posts aria-label=最新文章><h2 class=recent-posts-title>最新文章</h2><ul class=recent-posts-list><li><a href=/kubernetes-install/ title="steel 安装 kubernetes">steel 安装 kubernetes</a>
+<time datetime=2026-09-10>2026-09-10</time></li><li><a href=/openeuler-24.03-install-docker/ title="openEuler 24.03 (LTS-SP2) 二进制安装docker">openEuler 24.03 (LTS-SP2) 二进制安装docker</a>
 <time datetime=2026-05-27>2026-05-27</time></li><li><a href=/containerd-registry/ title="containerd - 使用自建registry">containerd - 使用自建registry</a>
 <time datetime=2025-05-19>2025-05-19</time></li><li><a href=/docker-buildx-multiarch/ title="docker buildx 多架构镜像">docker buildx 多架构镜像</a>
 <time datetime=2025-05-19>2025-05-19</time></li><li><a href=/skopeo-tools/ title="skopeo 下载镜像工具">skopeo 下载镜像工具</a>

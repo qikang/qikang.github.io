@@ -11,14 +11,14 @@
     </image>
     <generator>Hugo</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 09 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 10 Sep 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://qikang.github.io/series/kubernetes/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>kubernetes 万能安装</title>
+      <title>steel 安装 kubernetes</title>
       <link>https://qikang.github.io/kubernetes-install/</link>
-      <pubDate>Fri, 09 Oct 2026 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
       <guid>https://qikang.github.io/kubernetes-install/</guid>
-      <description>k8s万能安装</description>
+      <description>stell 工具安装k8s</description>
     </item>
     <item>
       <title>kubernetes kubeadm 安装 1.14.9</title>
